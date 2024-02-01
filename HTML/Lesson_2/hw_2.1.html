@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS HW 2.1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fjalla+One&family=Indie+Flower&family=Rubik+Pixels&family=Sedgwick+Ave+Display&display=swap');
+
+        * {
+            margin: 0;
+        }
+
+        div {
+            display: flex;
+        }
+
+        .wrapper {
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .box {
+            height: 15vw;
+            width: 15vw;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: aqua;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .font_1 p {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .font_2 p {
+            font-family: 'Fjalla One', sans-serif;
+        }
+
+        .font_3 p {
+            font-family: 'Indie Flower', cursive;
+        }
+
+        .font_4 p {
+            font-family: 'Rubik Pixels', system-ui;
+        }
+
+        .font_5 p {
+            font-family: 'Sedgwick Ave Display', cursive;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box font_1">
+        <p>Rubik Pixels</p>
+    </div>
+    <div class="box font_2">
+        <p>Sedgwick Ave Display</p>
+    </div>
+    <div class="box font_3">
+        <p>Dancing Script</p>
+    </div>
+    <div class="box font_4">
+        <p>Fjalla One</p>
+    </div>
+    <div class="box font_5">
+        <p>Indie Flower</p>
+    </div>
+</div>
+</body>
+</html>

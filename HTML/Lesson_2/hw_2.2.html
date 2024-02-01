@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS HW 2.2</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            min-height: 200px;
+            height: fit-content;
+            background: burlywood;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .wrapper > div {
+            background: green;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            transition: 0.4s;
+        }
+
+        .wrapper > div:hover {
+            background: blue;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS HW 2.3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+        body, html {
+            height: 100%;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            display: flex;
+        }
+
+        .wrapper {
+            flex-direction: column;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .wrapper__top, .wrapper__bottom {
+            font-size: 25px;
+            background: #356ab5;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper__top {
+            flex: 1 1 23%;
+        }
+
+        .wrapper__middle {
+            flex: 1 1 27%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .middle__widgets {
+            font-size: 15px;
+            background: #224576;
+            height: 85%;
+            width: 31%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper__bottom {
+            flex: 1 1 50%
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrapper__top">
+        <p>Widgets</p>
+    </div>
+    <div class="wrapper__middle">
+        <div class="middle__widgets">
+            <p>Big Widgets</p>
+        </div>
+        <div class="middle__widgets">
+            <p>Bigger Widgets</p>
+        </div>
+        <div class="middle__widgets">
+            <p>Huge Widgets</p>
+        </div>
+    </div>
+    <div class="wrapper__bottom">
+        <p>Contacts</p>
+    </div>
+</div>
+</body>
+</html>
