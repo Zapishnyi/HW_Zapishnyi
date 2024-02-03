@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS HW 2.1 add</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        div {
+            display: flex;
+        }
+
+        .wrapper {
+            flex-direction: column;
+            width: 500px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .wrapper > * {
+            margin: 15px 0 0 0;
+        }
+
+        .cards {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .card {
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px;
+            width: 80px;
+            height: 110px;
+            border: 1px solid black;
+            margin: 6px;
+            justify-content: space-evenly;
+            padding-bottom: 10px;
+        }
+
+        img {
+            width: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h2>Below are some popular topping <br> options
+        that will satisfy your palette <br> while making you full.</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c247-2427884_85682.png"
+                 alt="topping">
+            <p>Pepper</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c240-2427880_85675.png"
+                 alt="topping">
+            <p>Apple</p>
+        </div>
+        <div class="card"><img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c217-2427859_85693.png"
+                               alt="topping">
+            <p>Cheese</p>
+        </div>
+        <div class="card"><img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c245-2427889_85690.png"
+                               alt="topping">
+            <p>Corn</p>
+        </div>
+        <div class="card"><img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c239-2427893_85707.png"
+                               alt="topping">
+            <p>Mushroom</p>
+        </div>
+        <div class="card"><img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c238-2427878_85676.png"
+                               alt="topping">
+            <p>Garlic</p>
+        </div>
+        <div class="card"><img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c225-2427885_85692.png"
+                               alt="topping">
+            <p>Beef</p>
+        </div>
+        <div class="card"><img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c205-2427851_85705.png"
+                               alt="topping">
+            <p>Fish</p>
+        </div>
+        <div class="card"><img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c203-2427849_85703.png"
+                               alt="topping">
+            <p>Eggs</p>
+        </div>
+        <div class="card"><img src="https://cdn.icon-icons.com/icons2/1301/PNG/512/if-food-c235-2427892_85688.png"
+                               alt="topping">
+            <p>Coriander</p>
+        </div>
+    </div>
+    <p>...that's all</p>
+</div>
+</body>
+</html>

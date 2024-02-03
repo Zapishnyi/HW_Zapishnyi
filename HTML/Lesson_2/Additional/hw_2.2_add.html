@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS HW 2.2 add</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Kanit', sans-serif;
+            line-height: 180%;
+        }
+
+        div {
+            display: flex;
+        }
+
+        .wrapper {
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .wrapper__card {
+            flex-direction: column;
+            border-radius: 6px;
+            width: 320px;
+            height: 190px;
+            margin: 10px;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        .container {
+            width: 800px;
+            flex-wrap: wrap;
+        }
+
+        .card_name {
+            flex-direction: column;
+        }
+
+        .wrapper__card a {
+            display: flex;
+            align-items: center;
+            background: black;
+            border-radius: 10px;
+            width: fit-content;
+        }
+
+        a span {
+            display: flex;
+            text-decoration: underline;
+            margin: 5px 12px;
+            color: white;
+        }
+
+        .wrapper__card:nth-child(1) {
+            background: #699BF7;
+        }
+
+        .wrapper__card:nth-child(2) {
+            background: #C7B9FF;
+        }
+
+        .wrapper__card:nth-child(3) {
+            background: #FFC700;
+        }
+
+        .wrapper__card:nth-child(4) {
+            background: #FF8577;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="wrapper__card">
+            <div class="card_name">
+                <span>Tutorial video</span>
+                <h2>Dev Mode tutorial </h2>
+            </div>
+            <a href="#"><span>Watch the video</span></a>
+        </div>
+        <div class="wrapper__card">
+            <div class="card_name">
+                <span>Blog post</span>
+                <h2>Making Figma better for developers</h2>
+            </div>
+            <a href="#"><span>Go to the blog</span></a>
+        </div>
+        <div class="wrapper__card">
+            <div class="card_name">
+                <span>Help center</span>
+                <h2>Guide to Dev Mode</h2>
+            </div>
+            <a href="#"><span>Read th article</span></a></div>
+        <div class="wrapper__card">
+            <div class="card_name">
+                <span>Playground</span>
+                <h2>Prototype with variables</h2>
+            </div>
+            <a href="#"><span>Go to the playground</span></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

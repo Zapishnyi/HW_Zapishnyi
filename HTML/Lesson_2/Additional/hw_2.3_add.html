@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS HW 2.2 add</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            display: flex;
+        }
+
+        .wrapper {
+            height: 100%;
+            width: 900px;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+
+        .wrapper__container:nth-child(1) {
+            flex: 1 1 33%;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .wrapper__container:nth-child(2) {
+            width: 100%;
+            height: 300px;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .container__card {
+            width: 420px;
+            height: 200px;
+            border-radius: 10px;
+            border: 3px solid #106a54;
+            flex-direction: column;
+            padding: 50px 80px;
+            justify-content: center;
+
+        }
+
+        a {
+            color: black;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .wrapper__container:nth-child(3) {
+            flex: 1 1 33%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrapper__container">
+        <h1>How do you want to use this playground?</h1>
+    </div>
+    <div class="wrapper__container">
+        <div class="container__card"><a href="">Get me started ASAP</a>
+            <p>I want to learn the feature by trying it - you can just drop me in an example file with some tips
+            </p>
+        </div>
+        <div class="container__card"><a href="">Show me everything</a>
+            <p>I want to learn about each topic before trying an example</p>
+        </div>
+    </div>
+    <div class="wrapper__container"></div>
+</div>
+</body>
+</html>
