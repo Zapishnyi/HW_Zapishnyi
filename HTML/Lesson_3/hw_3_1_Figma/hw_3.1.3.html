@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML/CSS HW 3.3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+        body, html {
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 45px;
+            color: #000;
+        }
+
+        .wrapper *:not(span) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header, footer {
+            height: 20vh;
+            width: 100vw;
+        }
+
+        header {
+            background: #9B6F6F;
+        }
+
+        footer {
+            background: #524B4B;
+        }
+
+        aside {
+            flex-direction: column;
+        }
+
+        aside > * {
+            height: 20vh;
+            width: 34vw;
+        }
+
+        aside > div:nth-child(1) {
+            background: #D9D9D9;
+        }
+
+        aside > div:nth-child(2) {
+            background: #AA9898;
+        }
+
+        aside > div:nth-child(3) {
+            background: #C5BBBB;
+        }
+
+        main {
+            color: #000;
+        }
+
+        section {
+            height: 60vh;
+            width: 33vw;
+        }
+
+        section:nth-child(2) {
+            background: #8A8484;
+        }
+
+        section:last-child {
+            background: #C0B3B3;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header><span>Header</span></header>
+    <main>
+        <aside>
+            <div><span>News-1</span></div>
+            <div><span>News-2</span></div>
+            <div><span>News-3</span></div>
+        </aside>
+        <section><span>Content-1</span></section>
+        <section><span>Content-2</span></section>
+    </main>
+    <footer><span>Footer</span></footer>
+</div>
+</body>
+</html>

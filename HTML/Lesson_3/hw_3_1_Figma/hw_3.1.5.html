@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML/CSS HW 3.1.5</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+        body, html {
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 45px;
+            color: #000;;
+        }
+
+        .wrapper *:not(span) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header, footer {
+            height: 22vh;
+            width: 100vw;
+        }
+
+        header {
+            background: #D9D9D9;
+        }
+
+        footer {
+            background: #BDBDBD;
+        }
+
+        main > * {
+            height: 56vh;
+            width: 20vw
+        }
+
+        main > div:nth-child(1) {
+            background: #5E5050;
+        }
+
+        main > div:nth-child(2) {
+            background: #817C7C;
+        }
+
+        main > div:nth-child(3) {
+            background: #696464;
+        }
+
+        main > div:nth-child(4) {
+            background: #4E4949;
+        }
+
+        main > div:nth-child(5) {
+            background: #776C6C;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header><span>Header</span></header>
+    <main>
+        <div><span>Content</span></div>
+        <div><span>Content</span></div>
+        <div><span>Content</span></div>
+        <div><span>Content</span></div>
+        <div><span>Content</span></div>
+    </main>
+    <footer><span>footer</span></footer>
+</div>
+</body>
+</html>

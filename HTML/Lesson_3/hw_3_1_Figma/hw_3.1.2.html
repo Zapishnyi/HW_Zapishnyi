@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML/CSS HW 3.1.2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+        body, html {
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 45px;
+            color: #FFF;
+        }
+
+        .wrapper *:not(span,p) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header, footer {
+            width: 100vw;
+            height: 21.5vh;
+            color: #000;
+        }
+
+        header {
+            background: #8D8484;
+        }
+
+        footer {
+            background: #BDBDBD
+        }
+
+        section {
+            flex-direction: column;
+        }
+
+        section > * {
+            width: 73vw;
+            height: 19vh;
+        }
+
+        section > article:nth-child(1) {
+            background: #776969;
+        }
+
+        section > article:nth-child(2) {
+            background: #643030;
+        }
+
+        section > article:nth-child(3) {
+            background: #441818;
+        }
+
+        aside {
+            flex-direction: column;
+            height: 57vh;
+        }
+
+        aside > div {
+            width: 27vw;
+            height: 50%;
+        }
+
+        aside > div:first-child {
+            background: #937575;
+        }
+
+        aside > div:last-child {
+            background: #644C4C;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header><span>Header</span></header>
+    <main>
+        <section>
+            <article>
+                <p>Content-1</p>
+            </article>
+            <article>
+                <p>Content-2</p>
+            </article>
+            <article>
+                <p>Content-3</p>
+            </article>
+        </section>
+        <aside>
+            <div><span>spam-1</span></div>
+            <div><span>spam-2</span></div>
+        </aside>
+    </main>
+    <footer><span>footer</span></footer>
+</div>
+</body>
+</html>

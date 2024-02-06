@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML/CSS HW 3.1.4</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+        body, html {
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 45px;
+            color: #FFF;
+        }
+
+        .wrapper *:not(span) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header, footer {
+            height: 22vh;
+            width: 100vw;
+        }
+
+        header {
+            background: #927D7D;
+        }
+
+        footer {
+            background: #BDBDBD;
+        }
+
+        main > * {
+            height: 56vh;
+        }
+
+        main > *:nth-child(1) {
+            background: #817C7C;
+            width: 20vw;
+        }
+
+        main > *:nth-child(2) {
+            background: #A74848;
+            width: 60vw;
+        }
+
+        main > *:nth-child(3) {
+            background: #B7AEAE;
+            width: 20vw;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header><span>Header</span></header>
+    <main>
+        <aside><span>News</span></aside>
+        <section><span>Content</span></section>
+        <aside><span>Spam</span></aside>
+    </main>
+    <footer><span>Footer</span></footer>
+</div>
+</body>
+</html>

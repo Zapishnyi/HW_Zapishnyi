@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML/CSS HW 3.2</title>
+    <style>
+        html, body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0 10vw;
+            text-align: center;
+        }
+
+        section:nth-child(1) {
+            background: #c4705c;
+        }
+
+        section:nth-child(2) {
+            background: #8ae8df;
+        }
+
+        section:nth-child(3) {
+            background: #51c472;
+        }
+
+        img {
+            width: 40px;
+        }
+
+        img[src*="down"]:hover {
+            animation: arrow_jump_up 1s infinite ease-in-out;
+            transition: 0.5s;
+        }
+
+        img[src*="top"]:hover {
+            animation: arrow_jump_down 1s infinite ease-in-out;
+            transition: 0.5s;
+        }
+
+        @keyframes arrow_jump_up {
+            0% {
+                transform: translateY(0) scaleY(1);
+            }
+            25% {
+                transform: translateY(10px) scaleY(1.3);
+            }
+            50% {
+                transform: translateY(20px) scaleY(1);
+            }
+            75% {
+                transform: translateY(10px) scaleY(1.3);
+            }
+            100% {
+                transform: translateY(0) scaleY(1);
+            }
+
+        }
+
+        @keyframes arrow_jump_down {
+            0% {
+                transform: translateY(0) scaleY(1);
+            }
+            25% {
+                transform: translateY(-10px) scaleY(1.3);
+            }
+            50% {
+                transform: translateY(-20px) scaleY(1);
+            }
+            75% {
+                transform: translateY(-10px) scaleY(1.3);
+            }
+            100% {
+                transform: translateY(0) scaleY(1);
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <section id="section_1">
+        <h2>Section Title 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est expedita pariatur quaerat sed. A amet corporis,
+            delectus, distinctio eligendi enim facere inventore ipsam labore, modi numquam quis temporibus vero. Ad
+            animi blanditiis debitis eum ex facilis harum illo magnam neque nihil, nulla officia perspiciatis
+            praesentium similique, totam ullam voluptatibus voluptatum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, cumque ex expedita hic nihil nobis non quam
+            quos. Ab atque aut autem deserunt dolor dolorem dolores ea eius ex fugiat, fugit inventore ipsum itaque
+            molestias mollitia natus necessitatibus nesciunt non nulla officia optio porro quas quasi reiciendis rem
+            saepe sed similique sit suscipit temporibus unde vel vero vitae?</p>
+        <a href="#section_2">
+            <img src="./img/arrow-down-7-svgrepo-com.svg" alt="arrow down">
+        </a>
+    </section>
+    <section id="section_2">
+        <a href="#section_1">
+            <img src="./img/arrow-top-7-svgrepo-com.svg" alt="arrow up">
+        </a>
+        <h2>Section Title 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores distinctio ducimus libero
+            obcaecati repellat totam ullam vel vitae voluptatem. Animi ducimus, eum libero modi odit pariatur quaerat
+            suscipit. Aperiam asperiores autem beatae debitis deserunt eos illo laboriosam laborum magnam, non quas quia
+            repellendus. At cumque doloremque fugiat quos veniam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias molestias mollitia omnis. Aspernatur culpa
+            dolore ea, eius error illo in natus nihil odit placeat quibusdam quod similique voluptatum? Corporis dolorem
+            expedita explicabo minima molestiae officiis possimus suscipit tempora unde voluptatibus. </p>
+        <a href="#section_3">
+            <img src="./img/arrow-down-7-svgrepo-com.svg" alt="arrow down">
+        </a>
+    </section>
+    <section id="section_3">
+        <a href="#section_2">
+            <img src="./img/arrow-top-7-svgrepo-com.svg" alt="arrow up">
+        </a>
+        <h2>Section Title 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci assumenda, atque commodi, cumque
+            dicta dolorum error et nam nemo tenetur totam? Iste magni natus nesciunt nulla quia? A accusantium aperiam
+            at atque corporis delectus dolorem, ducimus error et eum eveniet facilis fugiat id impedit ipsam iusto
+            labore minima mollitia nesciunt non odit perspiciatis, provident quam quas reprehenderit sint temporibus
+            totam vero voluptatibus voluptatum. Accusamus distinctio ipsam ipsum temporibus?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque deleniti deserunt eius eligendi
+            eos, exercitationem fugit praesentium quam quas quasi quia recusandae reprehenderit. Consectetur dolores hic
+            incidunt? Delectus doloremque, enim exercitationem in ipsam iusto molestiae molestias nobis quis voluptas.
+            Aliquam animi cum doloribus, earum eveniet ex excepturi facere illo libero minus perferendis quia quod
+            ratione rem, voluptate?</p>
+    </section>
+</div>
+</body>
+</html>

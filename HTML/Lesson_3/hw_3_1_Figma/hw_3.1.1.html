@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML/CSS HW 3.1.1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 45px;
+            font-weight: 400;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        .wrapper * {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+        }
+
+        header {
+            height: 22vh;
+            background: #D9D9D9;
+            font-weight: 500;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        main {
+            height: 56vh;
+        }
+
+        aside {
+            height: 100%;
+            width: 18vw;
+        }
+
+        aside:first-child {
+            background: #817C7C;
+        }
+
+        aside:last-child {
+            background: #B7AEAE;
+        }
+
+        section {
+            height: 100%;
+            width: 64vw;
+            flex-direction: column;
+        }
+
+        section div {
+            height: 50%;
+            width: 100%;
+        }
+
+        section div:first-child {
+            background: #ABA8A8;
+        }
+
+        section div:last-child {
+            background: #878484;
+        }
+
+        footer {
+            height: 22vh;
+            background: #BDBDBD;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header><span>Header</span></header>
+    <main>
+        <aside><span>News-1</span></aside>
+        <section>
+            <div><span>Content-1</span></div>
+            <div><span>Content-2</span></div>
+        </section>
+        <aside><span>Sponsor</span></aside>
+    </main>
+    <footer><span>footer</span></footer>
+</div>
+</body>
+</html>
