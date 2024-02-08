@@ -114,7 +114,8 @@ iframe {
 
 .main__description p {
     font-size: 2.2rem;
-    max-width: 63vw;
+    max-width: 949px;
+    width: 63vw;
 }
 
 /*--------------Store section-----------------*/
