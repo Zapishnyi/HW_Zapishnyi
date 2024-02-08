@@ -105,8 +105,11 @@ section {
 }
 
 iframe {
+    max-height: 533px;
+    max-width: 949px;
     width: 63vw;
     height: calc(63vw / 1.74);
+    margin-bottom: 50px;
 }
 
 .main__description p {
