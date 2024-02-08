@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo&display=swap');
+
+html, body {
+    font-family: 'KoHo', sans-serif;
+    font-size: calc((0.5vw + 1.5vh) * 0.8);
+}
+
+:root {
+    --screen_size: calc(0.5vw + 2.2vh);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+/*--------Hero section -------------*/
+.wrapper__hero {
+    background: url("./img/background_mod.jpg") center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hero_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.hero_img {
+    width: calc(var(--screen_size) * 24);
+    height: calc(var(--screen_size) * 15);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: url("./img/hero_img.jpg") center / cover no-repeat;
+}
+
+.hero_message {
+    width: calc(var(--screen_size) * 24);
+    height: calc(var(--screen_size) * 15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 9px 0 39px 0;
+    background: #FAF9F7;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero_message h2 {
+    font-size: 2.8rem;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero_message p {
+    font-size: 1.6rem
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid rgba(156, 152, 152, 0.10);
+    background: rgba(217, 217, 217, 0.60);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    font-size: 1.9rem;
+    width: 27vw;
+    min-width: 110px;
+    max-width: 409px;
+    max-height: 76px;
+    height: calc(27vw / 4);
+    cursor: pointer;
+    font-family: 'KoHo', sans-serif;
+}
+
+
+/*----fade background start---------*/
+
+section {
+
+    background: url("./img/background_mod.jpg") center  / cover no-repeat;
+}
+
+.fade_cover {
+    display: flex;
+    padding: 50px 0;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.80);
+}
+
+/*----fade background end----------*/
+
+/*---------------Description section-------------*/
+.main__description .fade_cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+iframe {
+    width: 63vw;
+    height: calc(63vw / 1.74);
+}
+
+.main__description p {
+    font-size: 2.2rem;
+    max-width: 63vw;
+}
+
+/*--------------Store section-----------------*/
+.main__store .fade_cover {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.store_card {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    min-width: 250px;
+    min-height: 416px;
+    height: calc((1vw + 5vh) * 12);
+    background: rgba(83, 83, 83, 0.40);
+    padding: 1.5vw 1.5vw 5.8vw 1.5vw;
+}
+
+.store_card img {
+    width: 98%;
+
+}
+
+.store_card span {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.store_card span:last-of-type {
+    margin-top: 30px;
+}
+
+.store_card button {
+    color: #6B6666;
+}
