@@ -1,0 +1,88 @@
+/*------------------------ Fonts declaration ----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+
+@font-face {
+    font-family: "Lato 400";
+    src: url("../fonts/Lato-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato 600";
+    src: url("../fonts/Lato-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato 700";
+    src: url("../fonts/Lato-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato 800";
+    src: url("../fonts/Lato-ExtraBold.woff2") format("woff2");
+}
+
+.montserrat_700 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.nunito_400 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+}
+
+.nunito_600 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+}
+
+.lato_400 {
+    font-family: "Lato 400", sans-serif;
+    font-weight: 400;
+}
+
+.lato_600 {
+    font-family: "Lato 600", sans-serif;
+    font-weight: 600;
+}
+
+.lato_700 {
+    font-family: "Lato 700", sans-serif;
+    font-weight: 700;
+}
+
+.lato_800 {
+    font-family: "Lato 800", sans-serif;
+    font-weight: 800;
+}
+
+/*------------------------ Fonts declaration end ----------------------*/
+/*--------------------General declaration--------------------*/
+html, body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --background_gradient: radial-gradient(50% 50% at 50% 50%, #353550 0%, rgba(25, 25, 27, 0.00) 100%);
+    --background_violet: #5454D4;
+    --background_dark_violet: #19191B;
+    --text_violet: #5454D4;
+    --text_gray: rgba(255, 255, 255, 0.70);
+    --text_white: #FFF;
+
+}
