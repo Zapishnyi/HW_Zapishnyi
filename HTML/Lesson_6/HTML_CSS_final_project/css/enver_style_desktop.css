@@ -1,1 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap");
+/*------------------------ Fonts declaration ----------------------*/
+@font-face {
+    font-family: "Lato 400";
+    src: url("../fonts/Lato-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato 600";
+    src: url("../fonts/Lato-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato 700";
+    src: url("../fonts/Lato-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato 800";
+    src: url("../fonts/Lato-ExtraBold.woff2") format("woff2");
+}
+
+
+
