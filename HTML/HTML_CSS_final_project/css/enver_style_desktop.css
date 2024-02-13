@@ -1,6 +1,6 @@
 /*------------------------ Fonts declaration ----------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 @font-face {
     font-family: "Lato 400";
@@ -27,15 +27,6 @@
     font-weight: 700;
 }
 
-.nunito_400 {
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 400;
-}
-
-.nunito_600 {
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 600;
-}
 
 .lato_400 {
     font-family: "Lato 400", sans-serif;
@@ -60,8 +51,8 @@
 /*------------------------ Fonts declaration end ----------------------*/
 /*--------------------General declaration--------------------*/
 html, body {
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
+    box-sizing: border-box;
+    color: var(--text_gray)
 }
 
 * {
@@ -84,5 +75,329 @@ a {
     --text_violet: #5454D4;
     --text_gray: rgba(255, 255, 255, 0.70);
     --text_white: #FFF;
+}
 
+.container {
+    display: flex;
+    max-width: 1248px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 1.75rem;
+    margin-left: 8px;
+    color: var(--text_white);
+}
+
+.button_violet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    max-height: 60px;
+    min-height: 44px;
+    min-width: 166px;
+    aspect-ratio: 3.3/1;
+    width: calc(14vw);
+    color: var(--text_white);
+    font-size: 21px;
+    border-radius: 5px;
+    background: var(--background_violet);
+}
+
+/*--------------------General declaration end--------------------*/
+/*--------------------Header -------------------------------*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: var(--background_dark_violet);
+}
+
+header .container {
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+}
+
+
+header nav {
+    font-size: 18px;
+}
+
+nav a {
+    color: var(--text_gray);
+}
+
+nav a:not(:last-child) {
+    margin-right: 2.8vw;
+}
+
+.button_transparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: -0.5px;
+    color: var(--text_white);
+    width: 154px;
+    height: 44px;
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    backdrop-filter: blur(1px);
+}
+
+/*--------------------Header end ------------------------------*/
+/*----------------------Hero -------------------------------------*/
+
+.hero {
+    background: var(--background_dark_violet);
+}
+
+.hero .container {
+    background: var(--background_gradient);
+    min-height: 850px;
+    padding-bottom: 120px;
+}
+
+.hero__text {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__text h1 {
+    font-size: 80px;
+    line-height: 84px;
+    color: var(--text_white);
+}
+
+.hero__text p {
+    font-size: 21px;;
+    line-height: 39px;
+    letter-spacing: -0.657px;
+    margin: 24px 0 50px 0;
+    max-width: 536px;
+}
+
+.hero__img {
+    position: relative;
+    bottom: -55px;
+    right: -65px;
+    display: flex;
+    flex-basis: 50%;
+    height: 100%;
+}
+
+/*--------------------Hero end--------------------------*/
+/*----------------------"Why Enver" section---------------------*/
+
+.why_enver {
+    background: var(--background_dark_violet);
+}
+
+.why_enver .container {
+    background: var(--background_gradient);
+    flex-direction: column;
+}
+
+.why_enver__text {
+    display: flex;
+}
+
+.why_enver__text h2 {
+    color: var(--text_white);
+    font-size: 60px;
+    line-height: 70px;
+    max-width: 588px;
+    margin-right: 50px;
+}
+
+.why_enver__text p {
+
+    font-size: 21px;
+    font-style: normal;
+    line-height: 39px; /* 185.714% */
+    letter-spacing: -0.657px;
+}
+
+.why_enver__img {
+    margin-top: 50px;
+}
+
+/*----------------------"Why Enver" section end -------------------*/
+/*----------------------Services section--------------------------------*/
+.services {
+    background: var(--background_dark_violet);
+}
+
+.services .container {
+    background: var(--background_gradient);
+    min-height: 765px;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services h2 {
+    color: var(--text_white);
+    text-align: center;
+    font-size: 60px;
+    line-height: 70px;
+    max-width: 695px;
+}
+
+.services .service_list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service_list .service_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    min-width: 269px;
+    max-width: 300px;
+    width: 21vw;
+    margin: 29px;
+    /*border: 1px solid white;*/
+    text-align: center;
+}
+
+.img_back_plate {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_back_plate:has(img[src*=yellow]) {
+    background: rgba(254, 220, 90, 0.10);;
+}
+
+.img_back_plate:has(img[src*=violet]) {
+    background: rgba(84, 84, 212, 0.10);;
+}
+
+.img_back_plate:has(img[src*=red]) {
+    background: rgba(240, 64, 55, 0.10);
+}
+
+.service_card h4 {
+    color: var(--text_white);
+    font-size: 28px;
+    letter-spacing: -0.75px;
+    margin: 20px 0 24px 0;
+}
+
+.service_card p {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+}
+
+/*----------------------Services section end--------------------------------*/
+/*---------------------Portfolio section-----------------------------------------*/
+.portfolio {
+    background: var(--background_dark_violet);
+}
+
+.portfolio .container {
+    min-height: 792px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio h3 {
+    color: var(--text_white);
+    font-size: 58px;
+}
+
+.portfolio .projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.projects a {
+    aspect-ratio: 1.03/0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 384px;
+    width: 30vw;
+    min-width: 375px;
+    border-radius: 14px;
+    background: #1E1E20;
+    margin: 5px 0 5px 0;
+}
+
+.projects img {
+    max-width: 336px;
+    min-width: 327px;
+    width: 23vw;
+}
+
+.portfolio .balance {
+    height: 69px;
+}
+
+/*---------------------Portfolio section end-----------------------------------------*/
+/*-----------------------Contact us section*-------------------------------------- */
+
+.contacts {
+    background: var(--background_dark_violet);
+}
+
+.contacts .container {
+    min-height: 506px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts h2 {
+    color: var(--text_white);
+    font-size: 60px;
+    max-width: 826px;
+}
+
+/*-----------------------Contact us section end------------------------- */
+/*-----------------------Footer-----------------------------*/
+
+footer {
+    background: var(--background_dark_violet);
+}
+
+footer .container {
+    justify-content: space-between;
+    align-items: center;
+    min-height: 190px;
+}
+
+footer .container > * {
+    margin-bottom: 50px;
+}
+
+footer p {
+    text-align: right;
+    line-height: 38px; /* 237.5% */
+    letter-spacing: -0.5px;
 }
