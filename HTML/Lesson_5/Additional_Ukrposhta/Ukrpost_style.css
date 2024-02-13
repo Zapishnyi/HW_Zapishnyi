@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik:wght@400;700&display=swap');
+
+@font-face {
+    font-family: "Awesome 5";
+    src: url("font/Font Awesome 5 Free-Solid-900.woff2") format("woff2");
+
+}
+
+.open_sans {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+html, body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --background_white: #FFF;
+    --background_gray: #F8F8F8;
+    --background_light_yelow: #FEC524;
+    --background_dark_yelow: #FDC13D;
+    --background_blue: #042C4B;
+    --background_dark_blue: #1D2023;
+    --text_gray: #99A2AA;
+    --text_dark_blue: #0E2F4B;
+    --text_white: #fdfdfd;
+}
+
+
+.container {
+    max-width: 1180px;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+
+/*-----------------------Header start--------------------*/
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo {
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*__header left--*/
+header nav {
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    width: 100%;
+}
+
+header a {
+    color: var(--text_gray)
+}
+
+header li:not(:last-child) {
+    margin-right: 2.1vw;
+}
+
+/*--header right--------*/
+
+.header_right {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_right .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 90px;
+}
+
+.contacts span:not(:first-child) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--text_gray);
+
+}
+
+.header_right .registration {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.header_right a {
+    display: flex;
+    color: var(--text_dark_blue);
+    margin: 0 2px;
+}
+
+
+.registration span {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 40px;
+
+}
+
+.registration select {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.registration img {
+    margin: 0 2px;
+    width: 20px;
+
+}
+
+/*-----------------------Header end--------------------*/
+/*-------------------------Hero section start------------------------*/
+
+.hero {
+    min-height: 440px;
+
+    background: var(--background_light_yelow);
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.hero h2 {
+    margin: 44px 0 34px 0;
+    color: var(--text_white);
+}
+
+.hero p {
+    color: var(--text_dark_blue)
+}
+
+.hero .track {
+    display: flex;
+    width: fit-content;
+    position: relative;
+    align-items: center;
+    margin: 90px 0 55px 0;
+}
+
+.hero .track:after {
+    position: absolute;
+    right: 30px;
+    font-size: 20px;
+    color: var(--text_dark_blue);
+    content: "Track";
+    cursor: pointer;
+}
+
+.hero input {
+    width: 570px;
+    height: 72px;
+    box-shadow: 0 3px 35px 0 rgba(95, 98, 102, 0.17);
+    border-radius: 10px;
+    border: none;
+    background: var(--background_white);
+    padding-left: 30px;
+    position: relative;
+    font-size: 16px;
+    outline: none;
+}
+
+.hero input::placeholder {
+    font-size: 16px;
+}
+
+/*-------------------------Hero section end------------------------*/
+/*------------------------Services section start_________________________*/
+
+.services {
+    background: var(--background_gray);
+
+}
+
+.services .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.services .quick_button_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    top: -25.5px;
+}
+
+.services .quick_button {
+
+
+    aspect-ratio: 3.5/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23%;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 10px;
+    background: var(--background_white);
+    color: var(--text_gray);
+    box-shadow: 0 3px 35px 0 rgba(95, 98, 102, 0.17);
+}
+
+
+.quick_button img {
+    width: 30px;
+    margin-right: 8%;
+}
