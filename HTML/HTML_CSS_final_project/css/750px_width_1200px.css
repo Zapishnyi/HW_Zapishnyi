@@ -308,7 +308,7 @@ nav a:not(:last-child) {
     height: 300px;
     min-width: 269px;
     max-width: 300px;
-    width: 21vw;
+    width: calc(23vw + 26px);
     margin: 15px;
     text-align: center;
 }
@@ -338,13 +338,13 @@ nav a:not(:last-child) {
     font-family: "Lato 600", sans-serif;
     font-weight: 600;
     color: var(--text_white);
-    font-size: 28px;
+    font-size: calc(1.2vw + 14px);
     letter-spacing: -0.75px;
     margin: 20px 0 24px 0;
 }
 
 .service_card p {
-    font-size: 20px;
+    font-size: calc(1.1vw + 6px);
     line-height: 28px;
     letter-spacing: -0.5px;
 }
