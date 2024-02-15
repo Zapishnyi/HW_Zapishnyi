@@ -443,7 +443,7 @@ footer .container > * {
 
 footer p {
     font-family: "Lato 700", sans-serif;
-    color: var(--text_white);
+    color: var(--text_gray);
     font-weight: 700;
     text-align: right;
     line-height: 38px;
