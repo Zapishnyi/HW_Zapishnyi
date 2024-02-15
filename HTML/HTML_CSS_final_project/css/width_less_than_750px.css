@@ -1,0 +1,164 @@
+@media screen and ( 750px > width ) {
+    /*-----------------General declaration----------------*/
+    .button_violet {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 27px;
+    }
+
+    .logo span {
+        margin-left: 4px;
+    }
+
+    /*----------------------Header-----------------------------*/
+    header nav {
+        display: none;
+    }
+
+    .button_transparent {
+        display: none;
+    }
+
+    /*-------------------------Hero------------------------*/
+    .hero .container {
+        background: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-bottom: 133px;
+    }
+
+    .hero__text {
+        background: var(--background_gradient);
+    }
+
+    .hero__text h1 {
+        font-size: 42px;
+        line-height: 150%;
+    }
+
+    .hero__text p {
+        font-size: 16px;
+        line-height: 150%;
+        margin: 30px 0 50px 0;
+    }
+
+    .hero__img {
+        justify-content: center;
+        margin-top: 80px;
+
+    }
+
+    /*----------------"Why Enver" section---------------------*/
+    .why_enver__text {
+        flex-direction: column;
+    }
+
+    .why_enver__text h2 {
+        font-size: 36px;
+        line-height: 150%;
+        margin-bottom: 30px;
+    }
+
+    .why_enver__text p {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    /*----------------Services section-------------------*/
+    .services .container {
+        background: none;
+        margin-bottom: 140px;
+    }
+
+    .services h2 {
+        text-align: start;
+        font-size: 36px;
+        line-height: 150%;
+        margin-bottom: 40px;
+    }
+
+    .service_list .service_card {
+        height: 318px;
+        margin: 0;
+    }
+
+    .service_card h4 {
+        font-size: 24px;
+    }
+
+    .service_card p {
+        font-size: 16px;
+        text-wrap: balance;
+        width: 250px;
+    }
+
+    /*----------------Portfolio section-------------------*/
+    .portfolio .container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .portfolio h3 {
+        font-family: "Lato 400", sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        margin-bottom: 50px;
+
+        line-height: 150%;
+        font-style: normal;
+    }
+
+    .portfolio .projects {
+        justify-content: center;
+    }
+
+    .projects a:not(:first-child) {
+        display: none;
+    }
+
+    /*--------------Contact us section*---------------------- */
+    .contacts .container {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        min-height: 460px;
+    }
+
+    .contacts h2 {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+
+    /*--------------------Footer----------------------------*/
+    footer .container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 190px;
+        padding-bottom: 10px;
+    }
+
+    footer .container > * {
+        margin-bottom: 40px;
+    }
+
+    footer a {
+        color: var(--text_gray);
+        display: flex;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    footer p {
+        font-family: "Lato 400", sans-serif;
+        font-weight: 400;
+        color: var(--text_white);
+        display: flex;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+    }
+}
+

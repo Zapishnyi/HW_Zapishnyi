@@ -22,37 +22,16 @@
     src: url("../fonts/Lato-ExtraBold.woff2") format("woff2");
 }
 
-.montserrat_700 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-}
+/*----------------- Fonts declaration end -------------------*/
+/*--------------------General declaration--------------------*/
 
-
-.lato_400 {
+html, body, h1, h2 {
+    box-sizing: border-box;
+    color: var(--text_gray);
     font-family: "Lato 400", sans-serif;
     font-weight: 400;
-}
-
-.lato_600 {
-    font-family: "Lato 600", sans-serif;
-    font-weight: 600;
-}
-
-.lato_700 {
-    font-family: "Lato 700", sans-serif;
-    font-weight: 700;
-}
-
-.lato_800 {
-    font-family: "Lato 800", sans-serif;
-    font-weight: 800;
-}
-
-/*------------------------ Fonts declaration end ----------------------*/
-/*--------------------General declaration--------------------*/
-html, body {
-    box-sizing: border-box;
-    color: var(--text_gray)
+    text-wrap: balance;
+    user-select: none;
 }
 
 * {
@@ -91,35 +70,42 @@ a {
 }
 
 .logo span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     font-size: 1.75rem;
     margin-left: 8px;
     color: var(--text_white);
 }
 
 .button_violet {
+    font-family: "Lato 700", sans-serif;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 200px;
-    max-height: 60px;
+    max-width: 204px;
+    max-height: 58px;
     min-height: 44px;
     min-width: 166px;
-    aspect-ratio: 3.3/1;
-    width: calc(14vw);
+    aspect-ratio: 3.70/1;
+    width: calc(15vw);
     color: var(--text_white);
-    font-size: 21px;
+    font-size: calc(0.5vw + 13px);
     border-radius: 5px;
     background: var(--background_violet);
+    transition: 0.4s;
 }
 
-/*--------------------General declaration end--------------------*/
+.button_violet:hover {
+    box-shadow: 0 5px 50px #8e8ed4;
+    transition: 0.4s;
+}
+
+/*---------------General declaration end--------------------*/
 /*--------------------Header -------------------------------*/
 .wrapper {
     display: flex;
     flex-direction: column;
-}
-
-header {
     background: var(--background_dark_violet);
 }
 
@@ -129,13 +115,32 @@ header .container {
     align-items: center;
 }
 
-
 header nav {
+    display: flex;
     font-size: 18px;
 }
 
 nav a {
     color: var(--text_gray);
+    transform: scale(1);
+}
+
+nav a:first-child {
+    font-family: "Lato 600", sans-serif;
+    font-weight: 600;
+    color: var(--text_violet);
+    font-size: 18px;
+    letter-spacing: -0.5px
+}
+
+nav p {
+    transform: scale(1);
+    transition: 0.3s;
+}
+
+nav p:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
 }
 
 nav a:not(:last-child) {
@@ -145,6 +150,7 @@ nav a:not(:last-child) {
 .button_transparent {
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
     letter-spacing: -0.5px;
     color: var(--text_white);
@@ -153,19 +159,33 @@ nav a:not(:last-child) {
     border-radius: 5px;
     border: 1px solid #FFF;
     backdrop-filter: blur(1px);
+    overflow: hidden;
+}
+
+.button_transparent:after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: var(--background_violet);
+    bottom: -190px;
+    transition: 1s;
+    z-index: -1;
+}
+
+.button_transparent:hover:after {
+    transition: 1s;
+    bottom: -70px;
 }
 
 /*--------------------Header end ------------------------------*/
-/*----------------------Hero -------------------------------------*/
-
-.hero {
-    background: var(--background_dark_violet);
-}
+/*----------------------Hero ----------------------------------*/
 
 .hero .container {
     background: var(--background_gradient);
     min-height: 850px;
-    padding-bottom: 120px;
+    padding-bottom: 70px;
 }
 
 .hero__text {
@@ -176,37 +196,55 @@ nav a:not(:last-child) {
 }
 
 .hero__text h1 {
-    font-size: 80px;
+    font-size: calc(4.6vw + 20px);
     line-height: 84px;
     color: var(--text_white);
+    animation: element_appear 0.8s ease forwards 1;
 }
 
-.hero__text p {
-    font-size: 21px;;
+.hero__text > p {
+    font-size: calc(0.5vw + 13px);
     line-height: 39px;
     letter-spacing: -0.657px;
     margin: 24px 0 50px 0;
     max-width: 536px;
+    animation: element_appear 1.2s ease forwards 1;
+}
+
+.hero__text a {
+    font-family: "Lato 700", sans-serif;
+    font-weight: 700;
 }
 
 .hero__img {
-    position: relative;
-    bottom: -55px;
-    right: -65px;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     flex-basis: 50%;
-    height: 100%;
+    animation: element_appear 1.1s ease forwards 1;
 }
 
-/*--------------------Hero end--------------------------*/
-/*----------------------"Why Enver" section---------------------*/
-
-.why_enver {
-    background: var(--background_dark_violet);
+.hero__img img {
+    max-width: 524px;
+    min-width: 300px;
+    width: 36vw;
 }
+
+@keyframes element_appear {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*------------------------Hero end--------------------------*/
+/*------------------"Why Enver" section---------------------*/
 
 .why_enver .container {
-    background: var(--background_gradient);
     flex-direction: column;
 }
 
@@ -216,15 +254,14 @@ nav a:not(:last-child) {
 
 .why_enver__text h2 {
     color: var(--text_white);
-    font-size: 60px;
+    font-size: calc(3.5vw + 15px);
     line-height: 70px;
     max-width: 588px;
     margin-right: 50px;
 }
 
 .why_enver__text p {
-
-    font-size: 21px;
+    font-size: calc(0.5vw + 13px);
     font-style: normal;
     line-height: 39px; /* 185.714% */
     letter-spacing: -0.657px;
@@ -234,17 +271,14 @@ nav a:not(:last-child) {
     margin-top: 50px;
 }
 
-/*----------------------"Why Enver" section end -------------------*/
-/*----------------------Services section--------------------------------*/
-.services {
-    background: var(--background_dark_violet);
-}
+/*-----------------"Why Enver" section end -----------------------*/
+/*---------------------Services section---------------------------*/
 
 .services .container {
     background: var(--background_gradient);
     min-height: 765px;
     margin-top: 150px;
-    margin-bottom: 200px;
+    margin-bottom: 135px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -253,9 +287,11 @@ nav a:not(:last-child) {
 .services h2 {
     color: var(--text_white);
     text-align: center;
-    font-size: 60px;
+    font-size: calc(3.5vw + 15px);
     line-height: 70px;
     max-width: 695px;
+    text-wrap: pretty;
+    margin-bottom: 30px;
 }
 
 .services .service_list {
@@ -273,8 +309,7 @@ nav a:not(:last-child) {
     min-width: 269px;
     max-width: 300px;
     width: 21vw;
-    margin: 29px;
-    /*border: 1px solid white;*/
+    margin: 15px;
     text-align: center;
 }
 
@@ -300,6 +335,8 @@ nav a:not(:last-child) {
 }
 
 .service_card h4 {
+    font-family: "Lato 600", sans-serif;
+    font-weight: 600;
     color: var(--text_white);
     font-size: 28px;
     letter-spacing: -0.75px;
@@ -312,35 +349,33 @@ nav a:not(:last-child) {
     letter-spacing: -0.5px;
 }
 
-/*----------------------Services section end--------------------------------*/
-/*---------------------Portfolio section-----------------------------------------*/
-.portfolio {
-    background: var(--background_dark_violet);
-}
+/*----------------------Services section end-------------------------*/
+/*-----------------------Portfolio section---------------------------*/
 
 .portfolio .container {
-    min-height: 792px;
+    min-height: 770px;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .portfolio h3 {
+    font-family: "Lato 800", sans-serif;
+    font-weight: 800;
     color: var(--text_white);
-    font-size: 58px;
+    font-size: calc(2vw + 30px);
 }
 
 .portfolio .projects {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
-.projects a {
+.projects div {
     aspect-ratio: 1.03/0.8;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     max-width: 384px;
     width: 30vw;
@@ -348,6 +383,12 @@ nav a:not(:last-child) {
     border-radius: 14px;
     background: #1E1E20;
     margin: 5px 0 5px 0;
+    transition: 0.4s;
+}
+
+.projects div:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
 }
 
 .projects img {
@@ -360,12 +401,8 @@ nav a:not(:last-child) {
     height: 69px;
 }
 
-/*---------------------Portfolio section end-----------------------------------------*/
-/*-----------------------Contact us section*-------------------------------------- */
-
-.contacts {
-    background: var(--background_dark_violet);
-}
+/*---------------------Portfolio section end------------------------------*/
+/*-----------------------Contact us section*----------------------------- */
 
 .contacts .container {
     min-height: 506px;
@@ -374,17 +411,19 @@ nav a:not(:last-child) {
 }
 
 .contacts h2 {
+    font-weight: 400;
     color: var(--text_white);
-    font-size: 60px;
+    font-size: calc(3.5vw + 15px);
     max-width: 826px;
 }
 
-/*-----------------------Contact us section end------------------------- */
-/*-----------------------Footer-----------------------------*/
-
-footer {
-    background: var(--background_dark_violet);
+.contacts a {
+    font-family: "Lato 700", sans-serif;
+    font-weight: 700;
 }
+
+/*-----------------------Contact us section end------------------------- */
+/*-----------------------------Footer------------------------------------*/
 
 footer .container {
     justify-content: space-between;
@@ -392,12 +431,22 @@ footer .container {
     min-height: 190px;
 }
 
+footer a {
+    font-family: "Lato 700", sans-serif;
+    display: none;
+}
+
 footer .container > * {
     margin-bottom: 50px;
 }
 
 footer p {
+    font-family: "Lato 700", sans-serif;
+    color: var(--text_white);
+    font-weight: 700;
     text-align: right;
-    line-height: 38px; /* 237.5% */
+    line-height: 38px;
     letter-spacing: -0.5px;
 }
+
+/*---------------------------Footer end------------------------------------*/
