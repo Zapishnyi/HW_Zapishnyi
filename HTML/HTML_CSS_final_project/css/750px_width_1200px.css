@@ -101,13 +101,14 @@ a {
     transition: 0.4s;
 }
 
-/*---------------General declaration end--------------------*/
-/*--------------------Header -------------------------------*/
 .wrapper {
     display: flex;
     flex-direction: column;
     background: var(--background_dark_violet);
 }
+
+/*---------------General declaration end--------------------*/
+/*--------------------Header -------------------------------*/
 
 header .container {
     justify-content: space-between;
