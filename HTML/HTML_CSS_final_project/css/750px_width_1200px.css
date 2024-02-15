@@ -58,7 +58,8 @@ a {
 
 .container {
     display: flex;
-    max-width: 1248px;
+    max-width: 86vw;
+    /* max-width: 1248px;*/
     padding: 0 24px;
     margin: 0 auto;
 }
