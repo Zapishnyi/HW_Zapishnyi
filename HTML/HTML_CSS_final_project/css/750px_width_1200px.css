@@ -42,6 +42,7 @@ a {
     text-decoration: none;
 }
 
+/*main colors can be changed if needed*/
 :root {
     --background_gradient: radial-gradient(50% 50% at 50% 50%, #353550 0%, rgba(25, 25, 27, 0.00) 100%);
     --background_violet: #5454D4;
