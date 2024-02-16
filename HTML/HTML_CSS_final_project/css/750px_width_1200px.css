@@ -309,7 +309,7 @@ nav a:not(:last-child) {
     align-items: center;
     height: 300px;
     min-width: 269px;
-    max-width: 300px;
+    /*max-width: 300px;*/
     width: calc(23vw + 26px);
     margin: 15px;
     text-align: center;
