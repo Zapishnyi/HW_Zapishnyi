@@ -1,5 +1,11 @@
 @media screen and ( 750px > width ) {
     /*-----------------General declaration----------------*/
+    .container {
+        max-width: 100%;
+        padding: 0 24px;
+        margin: 0 auto;
+    }
+
     .button_violet {
         font-size: 16px;
     }
@@ -47,7 +53,6 @@
     .hero__img {
         justify-content: center;
         margin-top: 80px;
-
     }
 
     /*----------------"Why Enver" section---------------------*/
@@ -74,6 +79,7 @@
 
     .services h2 {
         text-align: start;
+        max-width: 100%;
         font-size: 36px;
         line-height: 150%;
         margin-bottom: 40px;
