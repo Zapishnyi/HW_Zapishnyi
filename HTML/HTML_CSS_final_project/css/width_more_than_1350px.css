@@ -24,8 +24,6 @@
     }
 
     .button_transparent {
-        /*width: 10.7vw;*/
-        /*height: 3.06vw;*/
         font-size: 0.76rem
     }
 
@@ -34,11 +32,6 @@
     .hero__text h1 {
         font-size: 3.8rem;
         line-height: 105%;
-    }
-
-    .hero .container {
-        /*min-height: 0.59vw;*/
-        /*padding-bottom: 8.3vw;*/
     }
 
     .hero__text > p {
@@ -50,7 +43,6 @@
     .hero__img img {
         max-width: 36.5vw;
     }
-
 
     /*-------------"Why Enver" section------------------*/
     .why_enver__text h2 {
