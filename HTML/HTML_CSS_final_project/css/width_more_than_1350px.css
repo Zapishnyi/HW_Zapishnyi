@@ -1,0 +1,121 @@
+@media screen and (width > 1350px) {
+    /*-----------------General declaration----------------*/
+    html, body, p {
+        font-size: calc((100vw - 375px) * 0.00467289719626168 + 16px);
+    }
+
+    .logo span {
+        font-size: 1.33rem;
+        margin-left: 0.55vw;
+    }
+
+
+    .button_violet {
+        font-size: 0.95rem;
+    }
+
+    /*----------------------Header------------------------*/
+    header .container {
+        height: 8.3vw;
+    }
+
+    header nav {
+        font-size: 0.86rem;
+    }
+
+    .button_transparent {
+        /*width: 10.7vw;*/
+        /*height: 3.06vw;*/
+        font-size: 0.76rem
+    }
+
+
+    /*----------------------Hero------------------------*/
+    .hero__text h1 {
+        font-size: 3.8rem;
+        line-height: 105%;
+    }
+
+    .hero .container {
+        /*min-height: 0.59vw;*/
+        /*padding-bottom: 8.3vw;*/
+    }
+
+    .hero__text > p {
+        font-size: 1rem;
+        line-height: 185%;
+
+    }
+
+    .hero__img img {
+        max-width: 36.5vw;
+    }
+
+
+    /*-------------"Why Enver" section------------------*/
+    .why_enver__text h2 {
+        font-size: 2.85rem;
+    }
+
+    .why_enver__text > p {
+        font-size: 1rem;
+        text-wrap: wrap;
+        max-width: 39vw;
+    }
+
+    /*------------------Services section------------------*/
+    .services h2 {
+        font-size: 2.85rem;
+    }
+
+    .img_back_plate {
+        width: 4.8vw;
+        height: 4.8vw;
+    }
+
+    .img_back_plate img {
+        width: 2.1vw;
+    }
+
+    .service_card h4 {
+        font-size: 1.33rem;
+    }
+
+    .service_card p {
+        font-size: 0.95rem;
+    }
+
+    /*-----------------Portfolio section---------------------*/
+    .portfolio h3 {
+        font-size: 2.76rem
+    }
+
+    .portfolio .projects {
+        justify-content: space-between;
+    }
+
+    .projects div {
+        aspect-ratio: 1.03/0.8;
+        max-width: 100%;
+        width: 26vw;
+    }
+
+    .projects img {
+        max-width: none;
+
+        width: 87%;
+        height: 87%;
+    }
+
+    /*----------------Contact us section*--------------------- */
+    .contacts h2 {
+        font-size: 2.85rem;
+        text-wrap: wrap;
+        flex-basis: 60%;
+    }
+
+    /*-----------------------Footer-----------------------------*/
+    footer a {
+        display: none;
+    }
+}

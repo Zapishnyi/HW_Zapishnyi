@@ -19,6 +19,13 @@
     }
 
     /*----------------------Header-----------------------------*/
+    header .container {
+        justify-content: space-between;
+        height: 140px;
+        align-items: center;
+        padding-bottom: 24px;
+    }
+
     header nav {
         display: none;
     }
@@ -32,7 +39,7 @@
         background: none;
         flex-direction: column;
         justify-content: space-evenly;
-        padding-bottom: 133px;
+        padding-bottom: 115px;
     }
 
     .hero__text {
@@ -47,12 +54,13 @@
     .hero__text p {
         font-size: 16px;
         line-height: 150%;
-        margin: 30px 0 50px 0;
+        max-width: 600px;
+        margin: 30px 0 20px 0;
     }
 
     .hero__img {
         justify-content: center;
-        margin-top: 80px;
+        margin-top: 30px;
     }
 
     /*----------------"Why Enver" section---------------------*/
@@ -67,8 +75,13 @@
     }
 
     .why_enver__text p {
+        margin-top: 0;
         font-size: 16px;
         line-height: 150%;
+    }
+
+    .why_enver__img {
+        margin: 50px 0 105px 0;
     }
 
     /*----------------Services section-------------------*/
@@ -92,18 +105,23 @@
 
     .service_card h4 {
         font-size: 24px;
+        margin: 20px 0 24px 0;
+
     }
 
     .service_card p {
         font-size: 16px;
         text-wrap: balance;
         width: 250px;
+        line-height: 28px;
     }
 
     /*----------------Portfolio section-------------------*/
     .portfolio .container {
+        height: 761px;
         flex-direction: column;
         justify-content: flex-start;
+
     }
 
     .portfolio h3 {
@@ -134,7 +152,12 @@
 
     .contacts h2 {
         font-size: 36px;
-        margin-bottom: 50px;
+        margin-bottom: 54px;
+        line-height: 150%;
+    }
+
+    .contacts a {
+        margin-left: 0;
     }
 
     /*--------------------Footer----------------------------*/
