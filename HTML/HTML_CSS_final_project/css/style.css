@@ -33,6 +33,9 @@ html, body, h1, h2 {
     text-wrap: balance;
     user-select: none;
 }
+body{
+    overflow-x:hidden ;
+}
 
 * {
     margin: 0;
@@ -51,6 +54,7 @@ a {
     --text_violet: #5454D4;
     --text_gray: rgba(255, 255, 255, 0.70);
     --text_white: #FFF;
+    --button_hover_glow:#8e8ed4;
 }
 
 .container {
@@ -84,18 +88,11 @@ a {
     justify-content: center;
     align-items: center;
     width: calc((100vw - 375px) * 0.0355 + 166px);
-    min-height: 44px;
-    min-width: 166px;
     aspect-ratio: 3.70/1;
     color: var(--text_white);
     font-size: calc((100vw - 375px) * 0.00374 + 16px);
     border-radius: 5px;
     background: var(--background_violet);
-    transition: 0.4s;
-}
-
-.button_violet:hover {
-    box-shadow: 0 5px 50px #8e8ed4;
     transition: 0.4s;
 }
 
@@ -122,8 +119,7 @@ header nav {
 
 nav a {
     color: var(--text_gray);
-    transform: scale(1);
-}
+   }
 
 nav a:first-child {
     font-family: "Lato 600", sans-serif;
@@ -134,11 +130,6 @@ nav a:first-child {
 
 nav p {
     transform: scale(1);
-    transition: 0.3s;
-}
-
-nav p:hover {
-    transform: scale(1.2);
     transition: 0.3s;
 }
 
@@ -171,11 +162,6 @@ nav a:not(:last-child) {
     bottom: -19vw;
     transition: 1s;
     z-index: -1;
-}
-
-.button_transparent:hover:after {
-    transition: 1s;
-    bottom: -5vw;
 }
 
 /*--------------------Header end ------------------------------*/
@@ -228,7 +214,7 @@ nav a:not(:last-child) {
 .hero__img img {
     max-width: 526px;
     min-width: 300px;
-    width: 47vw;
+    width: 43vw;
     margin-right: 14px;
 }
 
@@ -310,9 +296,9 @@ nav a:not(:last-child) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 21vw;
+    height: 26vw;
     min-width: 269px;
-    width: calc(23vw + 26px);
+    width: calc(23vw + 30px);
     margin: 0.8vw;
     text-align: center;
 }
@@ -331,11 +317,11 @@ nav a:not(:last-child) {
 }
 
 .img_back_plate:has(img[src*=yellow]) {
-    background: rgba(254, 220, 90, 0.10);;
+    background: rgba(254, 220, 90, 0.10);
 }
 
 .img_back_plate:has(img[src*=violet]) {
-    background: rgba(84, 84, 212, 0.10);;
+    background: rgba(84, 84, 212, 0.10);
 }
 
 .img_back_plate:has(img[src*=red]) {
@@ -397,14 +383,9 @@ nav a:not(:last-child) {
     margin: 5px 0;
 }
 
-.projects div:hover {
-    transform: scale(1.1);
-    transition: 0.4s;
-}
-
 .projects img {
-    width: 87%;
-    height: 87%;
+    width: 88%;
+    height: 88%;
 }
 
 .portfolio .balance {
@@ -448,7 +429,7 @@ footer a {
 }
 
 footer .container > * {
-    margin-bottom: 50px;
+    margin-bottom: 3.5vw;
 }
 
 footer p {

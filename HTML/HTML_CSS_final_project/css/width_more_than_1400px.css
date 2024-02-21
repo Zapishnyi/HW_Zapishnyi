@@ -1,4 +1,4 @@
-@media screen and (width > 1350px) {
+@media screen and (width > 1400px) {
     /*-----------------General declaration----------------*/
     html, body, p {
         font-size: calc((100vw - 375px) * 0.00467289719626168 + 16px);
@@ -8,7 +8,6 @@
         font-size: 1.33rem;
         margin-left: 0.55vw;
     }
-
 
     .button_violet {
         font-size: 0.95rem;
@@ -37,7 +36,6 @@
     .hero__text > p {
         font-size: 1rem;
         line-height: 185%;
-
     }
 
     .hero__img img {
@@ -68,7 +66,9 @@
     .img_back_plate img {
         width: 2.1vw;
     }
-
+.service_list .service_card{
+    height: 21vw;
+}
     .service_card h4 {
         font-size: 1.33rem;
     }
@@ -88,13 +88,12 @@
 
     .projects div {
         aspect-ratio: 1.03/0.8;
-        max-width: 100%;
+        max-width: initial;
         width: 26vw;
     }
 
     .projects img {
-        max-width: none;
-
+        max-width: initial;
         width: 87%;
         height: 87%;
     }
