@@ -322,7 +322,7 @@ compareButton.onclick = () => {
     outputConsole = "Numbers are equal";
     compareResult.innerText = " = ";
   } else {
-    outputConsole = "Entered data are not comparable";
+    outputConsole = "Entered data is not comparable";
     compareResult.innerText = "?";
   }
   console.log(outputConsole);
