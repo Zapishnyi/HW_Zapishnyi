@@ -205,7 +205,7 @@ switch (true) {
     console.log("Data you entered is out of range");
 }
 
-// Alternative, shorter one.
+// Alternative:
 let quarters = {
   1: "first",
   2: "second",
