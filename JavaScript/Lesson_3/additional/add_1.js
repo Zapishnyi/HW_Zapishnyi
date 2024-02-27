@@ -49,7 +49,7 @@ for (const number of numbers) {
 }
 //     3. перебрати циклом while та вивести  числа тільки з непарним індексом
 {
-    i = 1
+    let i = 1
     while (i < numbers.length) {
         console.log(numbers[i])
         i = i + 2;
@@ -61,7 +61,7 @@ for (let i = 1; i < numbers.length; i = i + 2) {
 }
 // 5. перебрати циклом while та вивести  числа тільки парні  значення
 {
-    i = 2
+    let i = 2
     while (i < numbers.length) {
         console.log(numbers[i])
         i = i + 2;
