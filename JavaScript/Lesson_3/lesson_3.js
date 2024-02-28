@@ -1,14 +1,20 @@
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
 
+document.write("----------1.1-----------");
 for (let i = 0; i < 10; i++) {
   document.write("<div> 1 - Lorem ipsum dolor sit amet, consectetur.  </div>");
 }
+
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+
+document.write("----------1.2-----------");
 for (let i = 0; i < 10; i++) {
   document.write(`<div> 2 - Lorem ipsum dolor sit amet. index = ${i}  </div>`);
 }
 
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+
+document.write("----------1.3-----------");
 {
   i = 0;
   while (i < 20) {
@@ -18,7 +24,10 @@ for (let i = 0; i < 10; i++) {
     i++;
   }
 }
+
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+
+document.write("----------1.4-----------");
 {
   i = 0;
   while (i < 20) {
@@ -33,6 +42,7 @@ for (let i = 0; i < 10; i++) {
 // побудувати структуру по шаблону
 // Масив:
 
+document.write("----------1.5-----------");
 let listOfItems = [
   "html",
   "css",
@@ -85,6 +95,8 @@ let listOfItems = [
 // побудувати структуру по шаблону
 // Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
 //
+
+document.write("----------1.6-----------");
 let products = [
   {
     title: "milk",
@@ -118,6 +130,7 @@ let products = [
 // <img src="IMAGE" alt="" class="product-image">
 // </div>
 // Замість TITLE PRICE IMAGE - підставити відповідні поля з об'єкту
+
 document.write("<div class='products'>");
 {
   for (let i = 0; i < products.length; i++) {
@@ -152,11 +165,13 @@ document.write("<div class='products'>");
   }
 }
 document.write("</div>");
+
 //
 //
 //
 // --------------------
 //     є масив
+
 let users = [
   { name: "vasya", age: 31, status: false },
   { name: "petya", age: 30, status: true },
@@ -172,6 +187,7 @@ let users = [
 ];
 // за допомоги циклу вивести:
 //     - користувачів зі статусом true
+document.write("----------1.7-----------");
 document.write(`<p>----------status: true------------</p>`);
 for (let user of users) {
   if (user.status) {
