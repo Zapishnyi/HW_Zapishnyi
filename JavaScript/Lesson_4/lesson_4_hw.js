@@ -171,7 +171,7 @@ function swap(arr, index1, index2) {
         outputArray.push(arr[i]);
     }
   }
-  return outputArray;
+  return outputArray || "Wrong input data format";
 }
 
 console.log(swap([11, 22, 33, 44], 0, 1));
@@ -182,11 +182,13 @@ console.log(swap([11, 22, 33, 44], 0, 1));
 console.log("----------13---------");
 
 function exchange(sumUAH, currencyValues, exchangeCurrency) {
+  let output;
   for (const currencyValuesItem of currencyValues) {
     if (currencyValuesItem.currency === exchangeCurrency) {
-      return sumUAH / currencyValuesItem.value;
+      output = sumUAH / currencyValuesItem.value;
     }
   }
+  return output || "Your currency is not in the exchange value list";
 }
 
 console.log(
