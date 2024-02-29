@@ -188,7 +188,7 @@ function exchange(sumUAH, currencyValues, exchangeCurrency) {
       output = sumUAH / currencyValuesItem.value;
     }
   }
-  return output || "Your currency is not in the exchange value list";
+  return output || "Your currency is missing in the exchange value list";
 }
 
 console.log(
