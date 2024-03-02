@@ -1,42 +1,36 @@
-// - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+// ВСЕ ЗРОБИТИ СТРІЛОЧНИМИ ФУНКЦІЯМИ!
+//     - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
 console.log("----------1---------");
-console.log(2 ** 4);
 
-function rectangleArea(a, b) {
-  return a * b;
-}
+const rectangleArea = (a, b) => a * b;
 
-console.log(rectangleArea(47, 54));
+console.log(rectangleArea(34, 56));
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
 console.log("----------2---------");
 
-function circleArea(r) {
-  return +(Math.PI * Math.pow(r, 2)).toFixed(2);
-}
+const circleArea = (r) => +(Math.PI * r ** 2).toFixed(2);
 
-console.log(circleArea(34));
+console.log(circleArea(2));
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
 console.log("----------3---------");
 
-function cylinderArea(h, r) {
-  return +(2 * Math.PI * h + 2 * Math.PI * Math.pow(r, 2)).toFixed(2);
-}
+const cylinderArea = (h, r) =>
+  +(2 * Math.PI * h + 2 * Math.PI * r ** 2).toFixed(2);
 
 console.log(cylinderArea(15, 25));
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 
 console.log("----------4---------");
-
-function extractArrayItem(array) {
+const extractArrayItem = (array) => {
   for (const arrayElement of array) {
     console.log(arrayElement);
   }
-}
+};
 
 extractArrayItem([2322, "423423", true, null, "fsrgfreg", 456, false]);
 
@@ -44,9 +38,7 @@ extractArrayItem([2322, "423423", true, null, "fsrgfreg", 456, false]);
 
 document.write("----------5---------");
 
-function paragraphCreate(text) {
-  document.write(`<p>${text}</p>`);
-}
+const paragraphCreate = (text) => document.write(`<p>${text}</p>`);
 
 paragraphCreate("tesfasefasefasefeaffasext");
 
@@ -54,13 +46,13 @@ paragraphCreate("tesfasefasefasefeaffasext");
 
 document.write("----------6---------");
 
-function listCreate(text) {
+const listCreate = (text) => {
   document.write(`<ul>`);
   for (let i = 0; i < 3; i++) {
     document.write(`<li>${text}</li>`);
   }
   document.write(`</ul>`);
-}
+};
 
 listCreate("List Item 4578");
 
@@ -68,13 +60,13 @@ listCreate("List Item 4578");
 
 document.write("----------7---------");
 
-function listCreateCustom(text, t) {
+const listCreateCustom = (text, t) => {
   document.write(`<ul>`);
   for (let i = 0; i < t; i++) {
     document.write(`<li>${text}</li>`);
   }
   document.write(`</ul>`);
-}
+};
 
 listCreateCustom("List Item 4578", 3);
 
@@ -82,13 +74,13 @@ listCreateCustom("List Item 4578", 3);
 
 document.write("----------8---------");
 
-function arrayToList(customArray) {
+const arrayToList = (customArray) => {
   document.write(`<ul>`);
   for (const item of customArray) {
     document.write(`<li>${item}</li>`);
   }
   document.write(`</ul>`);
-}
+};
 
 arrayToList([2322, "423423", true, null, "fsrgfreg", 456, false]);
 
@@ -109,7 +101,7 @@ let users = [
 ];
 document.write("----------9---------");
 
-function usersToDocument(userArray) {
+usersToDocument = (userArray) => {
   for (const userArrayElement of userArray) {
     document.write("<p>");
     for (const userArrayElementKey in userArrayElement) {
@@ -119,7 +111,7 @@ function usersToDocument(userArray) {
     }
     document.write("</p>");
   }
-}
+};
 
 usersToDocument(users);
 
@@ -127,7 +119,7 @@ usersToDocument(users);
 
 console.log("----------10---------");
 
-function minNumber(numArr) {
+const minNumber = (numArr) => {
   let min = numArr[0];
   for (let i = 1; i < numArr.length; i++) {
     if (min > numArr[i]) {
@@ -135,7 +127,7 @@ function minNumber(numArr) {
     }
   }
   return min;
-}
+};
 
 console.log(minNumber([2, 3, 45, 6, 76, -5, 23, 7, 89, 0, -4]));
 
@@ -143,66 +135,61 @@ console.log(minNumber([2, 3, 45, 6, 76, -5, 23, 7, 89, 0, -4]));
 
 console.log("----------11---------");
 
-function sumAllArrItems(array) {
+const sumAllArrItems = (array) => {
   let sum = 0;
   for (const num of array) {
     sum += num;
   }
   return sum;
-}
+};
 
 console.log(sumAllArrItems([3, 5, 7, 8, 9, 0, 3, 425, 66]));
 
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
-// Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+// Приклад  swap([11, 22, 33, 44], 0, 2) //=> [22,11,33,44]
 
 console.log("----------12---------");
+// Original array stay unchanged
+// const swap = (arr, index1, index2) => {
+//     let outputArray = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         switch (i) {
+//             case index1:
+//                 outputArray[outputArray.length] = arr[index2];
+//                 break;
+//             case index2:
+//                 outputArray[outputArray.length] = arr[index1];
+//                 break;
+//             default:
+//                 outputArray[outputArray.length] = arr[i];
+//         }
+//     }
+//     return outputArray;
+// }
 
-function swap(arr, index1, index2) {
-  let outputArray = [];
-  for (let i = 0; i < arr.length; i++) {
-    switch (i) {
-      case index1:
-        outputArray.push(arr[index2]);
-        break;
-      case index2:
-        outputArray.push(arr[index1]);
-        break;
-      default:
-        outputArray.push(arr[i]);
-    }
-  }
-  return outputArray || "Wrong input data format";
-}
-
-function swap1(arr, index1, index2) {
+// swap in original array
+const swap = (arr, index1, index2) => {
   let temp = arr[index1];
   arr[index1] = arr[index2];
   arr[index2] = temp;
-  return arr || "Wrong input data format";
-}
-
-let arr = [11, 22, 33, 44];
-let i1 = 0;
-let i2 = 1;
-console.log(swap(arr, i1, i2));
-// console.log(swap1(arr, i1, i2));
-console.log(arr);
+  return arr;
+};
+console.log(swap([11, 22, 33, 44], 0, 2));
 
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 
 console.log("----------13---------");
 
-function exchange(sumUAH, currencyValues, exchangeCurrency) {
+const exchange = (sumUAH, currencyValues, exchangeCurrency) => {
   let output;
-  for (const currencyValuesItem of currencyValues) {
-    if (currencyValuesItem.currency === exchangeCurrency) {
-      output = sumUAH / currencyValuesItem.value;
+  for (const item of currencyValues) {
+    if (item.currency === exchangeCurrency) {
+      output = sumUAH / item.value;
     }
   }
   return output || "Your currency is missing in the exchange value list";
-}
+};
 
 console.log(
   exchange(
