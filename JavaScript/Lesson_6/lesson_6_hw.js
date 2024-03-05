@@ -100,8 +100,8 @@ console.log("--------11---------");
 const base = {
   cardSuit: ["spade", "diamond", "heart", "club"],
   value: ["6", "7", "8", "9", "10", "ace", "jack", "queen", "king"],
-  color: ["red", "black"],
 };
+
 // cards array creation from data provided
 let cards = [].concat(
   ...base.cardSuit.map((suit) =>
@@ -165,6 +165,7 @@ console.log("--or--");
 cards
   .filter((e) => e.cardSuit === "club" && !(e.value < 9))
   .forEach((e) => console.log(e));
+
 // =========================
 //
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
@@ -176,7 +177,6 @@ cards
 // }
 
 console.log("--------11.6---------");
-
 console.log(
   cards.reduce(
     (acc, e) => {
