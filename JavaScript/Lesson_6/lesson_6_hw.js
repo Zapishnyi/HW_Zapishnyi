@@ -98,7 +98,7 @@ console.log(coursesAndDurationArray.map((e, i) => ({ id: i + 1, ...e })));
 //
 console.log("--------11---------");
 const base = {
-  cardSuit: ["spade", "diamond", "heart", "clubs"],
+  cardSuit: ["spade", "diamond", "heart", "club"],
   value: ["6", "7", "8", "9", "10", "ace", "jack", "queen", "king"],
   color: ["red", "black"],
 };
@@ -108,7 +108,7 @@ let cards = [].concat(
     base.value.map((cardValue) => ({
       cardSuit: suit,
       value: cardValue,
-      color: suit === "spade" || suit === "clubs" ? "black" : "red",
+      color: suit === "spade" || suit === "club" ? "black" : "red",
     })),
   ),
 );
@@ -157,13 +157,13 @@ cards.filter((e) => e.cardSuit === "diamond").forEach((e) => console.log(e));
 
 console.log("--------11.5---------");
 cards.forEach((e, i) =>
-  e.cardSuit === "clubs" && !(e.value < 9)
+  e.cardSuit === "club" && !(e.value < 9)
     ? console.log(e, ` : index = ${i}`)
     : null,
 );
 console.log("--or--");
 cards
-  .filter((e) => e.cardSuit === "clubs" && !(e.value < 9))
+  .filter((e) => e.cardSuit === "club" && !(e.value < 9))
   .forEach((e) => console.log(e));
 // =========================
 //
@@ -180,7 +180,7 @@ console.log("--------11.6---------");
 console.log(
   cards.reduce(
     (acc, e) => {
-      acc[e.cardSuit === "clubs" ? "clubs" : `${e.cardSuit}s`].push(e);
+      acc[`${e.cardSuit}s`].push(e);
       return acc;
     },
     {
