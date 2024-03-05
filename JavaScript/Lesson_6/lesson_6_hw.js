@@ -11,10 +11,10 @@ console.log("--------2---------");
 str.forEach((e, i) => console.log(`${str[i]} -> `, str[i].toUpperCase()));
 
 // - Перевести до нижнього регістру настипні стрінгові значення
-let str2 = ["HELLO WORLD", "LOREM IPSUM", "JAVASCRIPT IS COOL"];
 
 console.log("--------3---------");
-str.forEach((e, i) => console.log(`${str[i]} -> `, str[i].toLowerCase()));
+let str2 = ["HELLO WORLD", "LOREM IPSUM", "JAVASCRIPT IS COOL"];
+str2.forEach((e, i) => console.log(`${str2[i]} -> `, str2[i].toLowerCase()));
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 
