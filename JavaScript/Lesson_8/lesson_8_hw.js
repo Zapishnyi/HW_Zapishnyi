@@ -161,7 +161,7 @@ console.log(zaz);
 
 console.log("--------9---------");
 Car.prototype.drive = function () {
-  return console.log(`їдемо зі швидкістю ${this.maxSpeed}`);
+  console.log(`їдемо зі швидкістю ${this.maxSpeed}`);
 };
 zaz.drive();
 
@@ -171,7 +171,7 @@ console.log("--------10---------");
 Car.prototype.info = function () {
   for (const key in this) {
     if (typeof this[key] !== "function") {
-      console.log(`${key} - ${JSON.stringify(this[key])}`);
+      console.log(`${key} - ${this[key]}`);
     }
   }
 };
@@ -198,8 +198,8 @@ zaz.info();
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
 console.log("--------12---------");
-Car.prototype.addDriver = function (driverName) {
-  this.driver = arguments;
+Car.prototype.addDriver = function (...driverName) {
+  this.driver = driverName;
 };
 zaz.addDriver("Kiril", "Sergiy");
 zaz.info();
@@ -236,7 +236,7 @@ console.log("--------15---------");
 Car1.prototype.info = function () {
   for (const key in this) {
     if (typeof this[key] !== "function") {
-      console.log(`${key} - ${JSON.stringify(this[key])}`);
+      console.log(`${key} - ${this[key]}`);
     }
   }
 };
@@ -264,8 +264,8 @@ nissan.info();
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
 console.log("--------18---------");
-Car1.prototype.addDriver = function (driverName) {
-  this.driver = arguments;
+Car1.prototype.addDriver = function (...driverName) {
+  this.driver = driverName;
 };
 nissan.addDriver("Jim", "Henrix", "Jillian");
 nissan.info();
