@@ -28,6 +28,8 @@ console.log("--------4---------");
         ? clearStr(str.substring(0, str.length - 1))
         : str;
   console.log(`"${str}" -> "${clearStr(str)}"`);
+  console.log("---or---");
+  console.log(`"${str}" -> "${str.trim()}"`);
 }
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
