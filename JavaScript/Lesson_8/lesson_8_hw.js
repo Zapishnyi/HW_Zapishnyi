@@ -152,6 +152,24 @@ function Car(model, make, year, maxSpeed, engVol) {
   this.year = year;
   this.maxSpeed = maxSpeed + "km/h";
   this.engVol = engVol + "cm3";
+  // this.drive = function () {
+  //   console.log(`їдемо зі швидкістю ${this.maxSpeed}`);
+  // };
+  // this.info = function () {
+  //   for (const key in this) {
+  //     if (typeof this[key] === "function") continue;
+  //     console.log(`${key} - ${this[key]}`);
+  //   }
+  // };
+  // this.increaseMaxSpeed = function (newSpeed) {
+  //   this.maxSpeed = newSpeed + "km/h";
+  // };
+  // this.changeYear = function (newValue) {
+  //   this.year = newValue;
+  // };
+  // this.addDriver = function (...driverName) {
+  //   this.driver = driverName;
+  // };
 }
 
 let zaz = new Car("ZAZ-01", "ZAZ", 2001, 85, 1.2);
@@ -170,9 +188,8 @@ zaz.drive();
 console.log("--------10---------");
 Car.prototype.info = function () {
   for (const key in this) {
-    if (typeof this[key] !== "function") {
-      console.log(`${key} - ${this[key]}`);
-    }
+    if (typeof this[key] === "function") continue;
+    console.log(`${key} - ${this[key]}`);
   }
 };
 zaz.info();
@@ -216,6 +233,24 @@ class Car1 {
     this.year = year;
     this.maxSpeed = maxSpeed + "km/h";
     this.engVol = engVol + "cm3";
+    // this.drive = function () {
+    //   console.log(`їдемо зі швидкістю ${this.maxSpeed}`);
+    // };
+    // this.info = function () {
+    //   for (const key in this) {
+    //     if (typeof this[key] === "function") continue;
+    //     console.log(`${key} - ${this[key]}`);
+    //   }
+    // };
+    // this.increaseMaxSpeed = function (newSpeed) {
+    //   this.maxSpeed = newSpeed + "km/h";
+    // };
+    // this.changeYear = function (newValue) {
+    //   this.year = newValue;
+    // };
+    // this.addDriver = function (...driverName) {
+    //   this.driver = driverName;
+    // };
   }
 }
 
@@ -235,12 +270,10 @@ nissan.drive();
 console.log("--------15---------");
 Car1.prototype.info = function () {
   for (const key in this) {
-    if (typeof this[key] !== "function") {
-      console.log(`${key} - ${this[key]}`);
-    }
+    if (typeof this[key] === "function") continue;
+    console.log(`${key} - ${this[key]}`);
   }
 };
-
 nissan.info();
 
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
