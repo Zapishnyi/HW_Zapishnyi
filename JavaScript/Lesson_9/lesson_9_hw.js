@@ -55,10 +55,10 @@ let coursesAndDurationArray = [
 document.write("-------------4-------------");
 for (const course of coursesAndDurationArray) {
   let courseCard = document.createElement("div");
-  courseCard.classList.add("courseCard");
   let title = document.createElement("h3");
-  title.innerText = `Course name - ${course.title}`;
   let courseDuration = document.createElement("p");
+  courseCard.classList.add("courseCard");
+  title.innerText = `Course name - ${course.title}`;
   courseDuration.innerText = `Course duration - ${course.monthDuration} months`;
   body.appendChild(courseCard);
   courseCard.append(title, courseDuration);
@@ -84,11 +84,11 @@ for (const course of coursesAndDurationArray) {
 document.write("-------------5-------------");
 coursesAndDurationArray.forEach((e) => {
   let courseCard = document.createElement("div");
-  courseCard.classList.add("item");
   let title = document.createElement("h1");
+  let courseDuration = document.createElement("p");
+  courseCard.classList.add("item");
   title.classList.add("heading");
   title.innerText = e.title;
-  let courseDuration = document.createElement("p");
   courseDuration.classList.add("description");
   courseDuration.innerText = `Course duration - ${e.monthDuration} months`;
   body.appendChild(courseCard);
@@ -147,23 +147,23 @@ simpsonsWrapper.classList.add("simpson_wrapper");
 body.appendChild(simpsonsWrapper);
 simpsons.forEach((e) => {
   let characterCard = document.createElement("div");
-  characterCard.classList.add("member");
   let characterCardHead = document.createElement("div");
-  characterCardHead.classList.add("member__head");
   let memberLeft = document.createElement("div");
-  memberLeft.classList.add("member__left");
   let memberName = document.createElement("h2");
+  let memberAge = document.createElement("p");
+  let memberInfo = document.createElement("p");
+  let memberRight = document.createElement("div");
+  let memberImg = document.createElement("img");
+  characterCard.classList.add("member");
+  characterCardHead.classList.add("member__head");
+  memberLeft.classList.add("member__left");
   memberName.classList.add("member_name");
   memberName.innerText = `${e.name} ${e.surname}`;
-  let memberAge = document.createElement("p");
   memberAge.classList.add("member_age");
   memberAge.innerText = `Вік: ${e.age} р.`;
-  let memberInfo = document.createElement("p");
   memberInfo.classList.add("member_info");
   memberInfo.innerText = `${e.info}`;
-  let memberRight = document.createElement("div");
   memberRight.classList.add("member__right");
-  let memberImg = document.createElement("img");
   memberImg.classList.add("member_img");
   memberImg.alt = `${e.name} ${e.surname} image`;
   memberImg.src = e.photo;
@@ -296,7 +296,7 @@ coursesArray.forEach((e) => {
   courseTitle.innerText = e.title;
   duration.classList.add("course__duration");
   durationMonth.classList.add("duration_month");
-  durationMonth.innerText = `Duration - ${e.monthDuration} mos. `;
+  durationMonth.innerText = `Duration - ${e.monthDuration} months. `;
   durationHours.classList.add("duration_hours");
   durationHours.innerText = `   ${e.hourDuration} learning hrs. `;
   modulesTitle.classList.add("course__modules");
