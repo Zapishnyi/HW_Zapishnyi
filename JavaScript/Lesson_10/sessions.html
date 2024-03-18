@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sessions</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 14px 14px 50px 14px;
+
+        }
+
+        .session_card {
+            display: flex;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 7px 0;
+        }
+
+        .ses_number {
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .ses_number p {
+            display: flex;
+            justify-self: flex-start;
+            text-align: center;
+        }
+
+        .ses_number h2 {
+            display: flex;
+            font-size: 50px;
+        }
+
+        .session_info > * {
+            margin: 5px 0;
+
+        }
+
+        .mouse_events {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .mouse_events > div {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            border-radius: 3px;
+            background: #f1f1f1;
+            margin: 2px;
+            padding: 5px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 5px;
+            position: fixed;
+            bottom: 0;
+            left: calc(50% - 100px);
+            margin: 10px;
+            box-shadow: 0 0 15px gray;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    let body = document.querySelector("body")
+    let sessionsHistory = JSON.parse(localStorage.getItem("sessions"))
+    let sessionsWrapper = document.createElement("div");
+    sessionsWrapper.classList.add("wrapper");
+    body.appendChild(sessionsWrapper)
+    sessionsHistory.forEach((e, i) => {
+        let sesCard = document.createElement("div")
+        sesCard.classList.add("session_card")
+        let sesNumber = document.createElement("div")
+        sesNumber.classList.add("ses_number")
+        sesNumber.innerHTML = `<p>Session <br> number</p>
+                                 <h2>${i + 1}</h2>`
+        let sesInfo = document.createElement("div")
+        sesInfo.classList.add("session_info")
+        sesInfo.innerHTML = `<p>Session started: ${e.loading}</p>
+                             <p>Document tree read: ${e.interactive}</p>
+                             <p>Document downloaded: ${e.complete}</p>
+                             <p>Document fully rendered: ${e.page_fully_loaded}</p>`
+
+
+        sessionsWrapper.appendChild(sesCard)
+        sesCard.append(sesNumber, sesInfo)
+        let mouseEventsBlock = document.createElement("div");
+        mouseEventsBlock.classList.add("mouse_events")
+        sesInfo.appendChild(mouseEventsBlock)
+        e.mouse_over_the_page.forEach((mouse_e, index) => {
+            let mouse_event = document.createElement("div")
+
+            mouse_event.innerHTML = `<p>Mouse over event No${index + 1}: ${mouse_e || "not happened"}</p>
+                                     <p>Mouse leave event No${index + 1}: ${e.mouse_left_the_page[index] || "not happened"}</p>`
+            mouseEventsBlock.appendChild(mouse_event)
+        })
+        let sesClosed = document.createElement("p")
+        sesClosed.innerText = `Session closed: ${e.session_closed}`
+        sesInfo.appendChild(sesClosed)
+    })
+
+
+    let sessionClearBtn = document.createElement("button")
+    sessionClearBtn.innerText = "Clear sessions history"
+    sessionsWrapper.appendChild(sessionClearBtn)
+    sessionClearBtn.addEventListener("click", () => {
+        localStorage.removeItem("sessions")
+        sessionsWrapper.remove()
+        window.history.back();
+        window.close()
+    })
+
+</script>
+</body>
+</html>

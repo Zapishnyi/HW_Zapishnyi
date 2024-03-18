@@ -1,0 +1,160 @@
+/*---------------------1---------------------*/
+.user_data_form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+}
+
+.user_data_form > * {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.user_data_form > p {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/*---------------------2---------------------*/
+
+.load_counter {
+    width: 250px;
+    font-size: 40px;
+    margin: 15px;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 170px;
+    border-radius: 15px;
+}
+
+.load_counter p:first-child {
+    font-size: 18px;
+    margin: 0;
+
+}
+
+/*---------------------4---------------------*/
+.arr_slider {
+    display: flex;
+    justify-content: space-between;
+    min-height: 30px;
+    width: 100%;
+}
+
+.slider_body {
+    display: flex;
+    width: 100%;
+}
+
+.slide_wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.slide_wrap > p {
+    text-align: center;
+    margin: 3px;
+    background: #e7e7e7;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+button {
+    background: #ededee;
+    border-radius: 3px;
+}
+
+.warning {
+    animation: dead_end 1s;
+}
+
+@keyframes dead_end {
+    0% {
+        background: #e7e7e7;
+    }
+    20% {
+        background: #f48787;
+    }
+    100% {
+        background: #e7e7e7;
+    }
+
+}
+
+/*---------------------4---------------------*/
+.axe_5 {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.magic_block {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+}
+
+
+#text {
+    background: #3c5180;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons > button {
+    width: 50%;
+    font-size: 20px;
+}
+
+.disappear {
+    display: none;
+}
+
+/*---------------------7---------------------*/
+.exe_seven {
+    display: flex;
+    flex-direction: column;
+}
+
+.output_table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.output_table > div {
+    display: flex;
+    width: 100%;
+}
+
+.output_table > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+    width: 100%;
+    border: 1px solid black;
+}
