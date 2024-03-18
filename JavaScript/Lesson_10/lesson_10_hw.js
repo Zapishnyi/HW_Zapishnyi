@@ -49,10 +49,8 @@ let loadCounterReset = document.createElement("button");
 loadCounterBox.classList.add("load_counter");
 loadCounterReset.innerText = "Reset page re-load counter";
 loadCounterBox.append(counterLabel, loadCounter, loadCounterReset);
-window.addEventListener("load", () => {
-  loadCounter.innerText = +localStorage.getItem("counter") + 1;
-  localStorage.setItem("counter", loadCounter.innerText);
-});
+loadCounter.innerText = +localStorage.getItem("counter") + 1;
+localStorage.setItem("counter", loadCounter.innerText);
 body.appendChild(loadCounterBox);
 loadCounterReset.addEventListener("click", () => {
   localStorage.setItem("counter", "0");
