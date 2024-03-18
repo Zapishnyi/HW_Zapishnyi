@@ -76,7 +76,7 @@ button {
 }
 
 .warning {
-    animation: dead_end 1s;
+    animation: dead_end 0.5s;
 }
 
 @keyframes dead_end {

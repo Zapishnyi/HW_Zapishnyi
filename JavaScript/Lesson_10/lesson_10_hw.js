@@ -127,13 +127,14 @@ let render = (toShow, button) => {
     slideWrap.appendChild(slide);
   }
   if (button) {
-    button.classList.remove("warning");
+    setTimeout(() => button.classList.remove("warning"), 500);
   }
 };
 render(toShow, null);
 prevBtn.addEventListener("click", function (e) {
   if (toShow === 0) {
     this.classList.add("warning");
+    render(toShow, this);
   } else {
     toShow = toShow - 10;
     render(toShow, this);
@@ -142,6 +143,7 @@ prevBtn.addEventListener("click", function (e) {
 nextBtn.addEventListener("click", function (e) {
   if (toShow === 90) {
     this.classList.add("warning");
+    render(toShow, this);
   } else {
     toShow = toShow + 10;
     render(toShow, this);
