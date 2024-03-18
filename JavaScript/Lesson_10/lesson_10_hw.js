@@ -195,7 +195,7 @@ checkBtn.addEventListener("click", () => {
       alert("Your age is below 18");
       break;
     }
-    case !ageInput.value: {
+    case !ageInput.value || isNaN(+ageInput.value): {
       alert("Please enter your age");
       break;
     }
