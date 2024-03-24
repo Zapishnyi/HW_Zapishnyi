@@ -107,8 +107,8 @@ body.appendChild(arraySlider);
 let prevBtn = document.createElement("button");
 let nextBtn = document.createElement("button");
 let sliderBody = document.createElement("div");
-prevBtn.classList.add("prev_btn");
-nextBtn.classList.add("next_btn");
+prevBtn.classList.add("prev_btn-10", "btn");
+nextBtn.classList.add("next_btn+10", "btn");
 sliderBody.classList.add("slider_body");
 prevBtn.innerText = "PREV";
 nextBtn.innerText = "NEXT";
@@ -131,23 +131,13 @@ let render = (toShow, button) => {
   }
 };
 render(toShow, null);
-prevBtn.addEventListener("click", function (e) {
-  if (toShow === 0) {
-    this.classList.add("warning");
-    render(toShow, this);
-  } else {
-    toShow = toShow - 10;
-    render(toShow, this);
-  }
-});
-nextBtn.addEventListener("click", function (e) {
-  if (toShow === 90) {
-    this.classList.add("warning");
-    render(toShow, this);
-  } else {
-    toShow = toShow + 10;
-    render(toShow, this);
-  }
+document.querySelectorAll(".btn").forEach((e) => {
+  e.addEventListener("click", function () {
+    let temp = toShow + +this.className.split(" ")[0].substring(8);
+    temp < 0 || temp > 90
+      ? (this.classList.add("warning"), render(toShow, this))
+      : render((toShow = temp), this);
+  });
 });
 
 //

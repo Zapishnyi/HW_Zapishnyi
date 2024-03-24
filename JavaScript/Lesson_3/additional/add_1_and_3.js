@@ -1,5 +1,5 @@
 console.log(
-  "---------------------------------additional 1 -------------------------------",
+  "---------------------------------additional 1 -------------------------------"
 );
 // --створити масив з:
 //     - з 5 числових значень
@@ -438,7 +438,7 @@ console.log("---------1.31---------");
     }
     if (i === bookList.length - 1) {
       console.log(
-        `Book that includes biggest genre quantity: ${bookList[max].title}`,
+        `Book that includes biggest genre quantity: ${bookList[max].title}`
       );
     }
   }
@@ -465,7 +465,7 @@ console.log("---------1.33---------");
 for (const bookListElement of bookList) {
   if (bookListElement.authors.length === 2) {
     console.log(
-      `${bookListElement.title} - 2 authors: ${bookListElement.authors}`,
+      `${bookListElement.title} - 2 authors: ${bookListElement.authors}`
     );
   }
 }
@@ -476,14 +476,14 @@ console.log("---------1.34---------");
 for (const bookListElement of bookList) {
   if (bookListElement.authors.length === 1) {
     console.log(
-      `${bookListElement.title} - 1 author: ${bookListElement.authors}`,
+      `${bookListElement.title} - 1 author: ${bookListElement.authors}`
     );
   }
 }
 
 //--------------------------------------------------additional 3 --------------------------------------------------
 console.log(
-  "---------------------------------additional 3 -------------------------------",
+  "---------------------------------additional 3 -------------------------------"
 );
 
 // 1. Створити пустий масив та :

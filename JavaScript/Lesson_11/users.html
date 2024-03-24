@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" href="./lesson_11.css">
+</head>
+<body>
+
+<script>
+    //     - зробити файл users.html
+    // з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
+    let elm = (tegName) => document.createElement(tegName);
+    let body = document.querySelector("body");
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(users => {
+            let exe = elm("p")
+            exe.innerText = `----------------- Exercise  users ----------------`
+            body.appendChild(exe)
+            let usersWrap = elm("div")
+            usersWrap.classList.add("users")
+            body.appendChild(usersWrap)
+            users.forEach(e => {
+                let userCard = elm("div")
+                let userID = elm("h3")
+                let userName = elm("p")
+                userID.innerText = e.id;
+                userName = e.name
+                usersWrap.appendChild(userCard)
+                userCard.append(userID, userName)
+                userCard.addEventListener("click", () => {
+                    let ref = elm("a");
+                    ref.href = `user-details.html?id=${e.id}`
+                    ref.click()
+                })
+            })
+        })
+    //     вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
+    // при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про користувача (всі 15 полів)
+    // отримана через додатковий запит (https://jsonplaceholder.typicode.com/users/XXX   де ХХХ - айді користувача)
+
+</script>
+</body>
+</html>
