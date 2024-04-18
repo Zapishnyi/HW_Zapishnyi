@@ -1,0 +1,234 @@
+use kostiantyn;
+show tables ;
+select * from cars;
+знайти всі машини старші за 2000 р.
+select  * from cars where year > 2000;
+
+знайти всі машини молодші 2015 р.
+select  * from cars where year < 2015;
+
+знайти всі машини 2008, 2009, 2010 років
+select  * from cars where year = 2008 and year = 2009 and year=2010;
+
+знайти всі машини не з цих років 2008, 2009, 2010
+select  * from cars where year != 2008 or year!= 2009 or year!=2010;
+
+знайти всі машини де year==price
+select  * from cars where year = price;
+
+
+знайти всі машини bmw старші за 2014 р.
+select  * from cars where model = 'bmw' and year < 2014;
+
+знайти всі машини audi молодші 2014 р.
+select  * from cars where model = 'bmw' and year > 2014;
+
+знайти перші 5 машин
+select  * from cars limit 5;
+
+знайти останні 5 машин
+select  * from cars order by  id desc limit 5;
+
+
+знайти середнє арифметичне цін машини KIA
+select model, avg(price) as AvgPrice from cars where model = 'kia' group by  model;
+
+
+знайти середнє арифметичне цін для кожної марки машин окремо
+select model, avg(price) as AvgPrice from cars group by  model;
+
+підрахувати кількість кожної марки
+select model, count(model) as qtty from cars group by model order by model;
+
+знайти марку машин кількість яких найбільше
+select model, count(model) as QTTY from cars group by model order by QTTY desc  limit 1;
+
+
+знайти марку машини в назві яких друга та передостання буква "a"
+select  * from cars where model like '_a%a_';
+
+знайти всі машини назва моделі яких більше за 8 символів
+select  * from cars where length(model) > 8;
+
+***знайти машини ціна котрих більше ніж ціна середнього арифметичного всіх машин
+select  * from cars where price > (select avg(price) from cars ) ;
+
+
+lesson 2
+
+1.Вибрати усіх клієнтів, чиє ім'я має менше ніж 6 символів.
+select * from client
+                  join application on client.idClient = application.Client_idClient
+                  join department on department.idDepartment = client.Department_idDepartment
+where length(FirstName) <6;
+
+2.Вибрати львівські відділення банку.
+select * from client
+                  join application on client.idClient = application.Client_idClient
+                  join department on department.idDepartment = client.Department_idDepartment
+where DepartmentCity = 'lviv';
+
+3.Вибрати клієнтів з вищою освітою та посортувати по прізвищу.
+select * from client
+     join application on client.idClient = application.Client_idClient
+     join department on department.idDepartment = client.Department_idDepartment
+where Education= 'high' order by LastName;
+
+4.Виконати сортування у зворотньому порядку над таблицею Заявка і вивести 5 останніх елементів.
+select * from client
+     join application on client.idClient = application.Client_idClient
+     join department on department.idDepartment = client.Department_idDepartment
+ order by idApplication desc limit 5;
+
+5.Вивести усіх клієнтів, чиє прізвище закінчується на OV чи OVA.
+select * from client
+                  join application on client.idClient = application.Client_idClient
+                  join department on department.idDepartment = client.Department_idDepartment
+where LastName like '%ch' or LastName like '%va';
+
+6.Вивести клієнтів банку, які обслуговуються київськими відділеннями.
+select * from client
+                  join application on client.idClient = application.Client_idClient
+                  join department on department.idDepartment = client.Department_idDepartment
+where DepartmentCity = 'kyiv';
+
+
+7.Знайти унікальні імена клієнтів.
+select  distinct FirstName from client;
+
+8.Вивести дані про клієнтів, які мають кредит більше ніж на 5000 гривень.
+select  * from client
+      join application on client.idClient = application.Client_idClient
+      join department on department.idDepartment = client.Department_idDepartment
+where Sum>5000 and Currency = 'Gryvnia';
+
+9.Порахувати кількість клієнтів усіх відділень та лише львівських відділень.
+select count(DepartmentCity) as totalDepartments,(
+select count(DepartmentCity) from department where DepartmentCity = 'lviv'
+  )
+   as lvivDep  from department ;
+
+10.Знайти кредити, які мають найбільшу суму для кожного клієнта окремо.
+select FirstName, LastName, max(Sum) as MaxCreditSum  from client
+                                     join application on client.idClient = application.Client_idClient
+                                     join department on department.idDepartment = client.Department_idDepartment
+group by LastName, FirstName ;
+
+11. Визначити кількість заявок на крдеит для кожного клієнта.
+select FirstName, LastName, count(LastName) as ApplicationCount  from client
+                                     join application on client.idClient = application.Client_idClient
+                                     join department on department.idDepartment = client.Department_idDepartment
+group by LastName, FirstName ;
+
+12. Визначити найбільший та найменший кредити.
+select Currency,  max(Sum) as MaxCredit, min(Sum) as MinCredit  from client
+    join application on client.idClient = application.Client_idClient
+    join department on department.idDepartment = client.Department_idDepartment
+group by Currency;
+
+13. Порахувати кількість кредитів для клієнтів,які мають вищу освіту.
+select FirstName, LastName, count(FirstName) as ApplicationCount  from client
+     join application on client.idClient = application.Client_idClient
+      join department on department.idDepartment = client.Department_idDepartment
+where Education = 'high' group by  FirstName, LastName;
+
+14. Вивести дані про клієнта, в якого середня сума кредитів найвища.
+select FirstName, LastName, Education,Age,City,   avg(sum) as avarageSum   from client
+      join application on client.idClient = application.Client_idClient
+group by   FirstName, LastName, Education,Age,City order by avarageSum desc limit 1;
+
+
+15. Вивести відділення, яке видало в кредити найбільше грошей
+select DepartmentCity, sum(sum) as MaxCreditSum   from client
+     join application on client.idClient = application.Client_idClient
+     join department on department.idDepartment = client.Department_idDepartment
+group by DepartmentCity order by  MaxCreditSum desc limit 1;
+
+16. Вивести відділення, яке видало найбільший кредит.
+select DepartmentCity, Sum  from client
+      join application on client.idClient = application.Client_idClient
+      join department on department.idDepartment = client.Department_idDepartment
+order by sum desc limit 1 ;
+
+17. Усім клієнтам, які мають вищу освіту, встановити усі їхні кредити у розмірі 6000 грн.
+update client
+    join application on client.idClient = application.Client_idClient
+    join department on department.idDepartment = client.Department_idDepartment
+ set Sum = 6000 where Education = 'high'  ;
+
+18. Усіх клієнтів київських відділень пересилити до Києва.
+update client
+    join application on client.idClient = application.Client_idClient
+    join department on department.idDepartment = client.Department_idDepartment
+ set City = 'Kyiv' where DepartmentCity = 'Kyiv'  ;
+
+19. Видалити усі кредити, які є повернені.
+delete application from client
+    join application on client.idClient = application.Client_idClient
+    join department on department.idDepartment = client.Department_idDepartment
+where CreditState = 'returned';
+
+20. Видалити кредити клієнтів, в яких друга літера прізвища є голосною.
+delete application from client
+      join application on client.idClient = application.Client_idClient
+      join department on department.idDepartment = client.Department_idDepartment
+where substring(LastName,2,1) in ('e','a', 'e', 'i', 'o', 'u', 'y');
+
+21.Знайти львівські відділення, які видали кредитів на загальну суму більше ніж 5000
+select * from (select DepartmentCity, idDepartment,   sum(Sum)
+       as creditSum from application
+    join department on application.Client_idClient = department.idDepartment
+   where DepartmentCity = 'lviv'   group by idDepartment ) as temp where creditSum >5000 ;
+
+22.Знайти клієнтів, які повністю погасили кредити на суму більше ніж 5000
+select *
+        from client
+    join application on client.idClient = application.Client_idClient
+    join department on department.idDepartment = client.Department_idDepartment
+where CreditState = 'returned' and Sum > 5000   ;
+
+23.Знайти максимальний неповернений кредит.
+select *
+from client
+    join application on client.idClient = application.Client_idClient
+    join department on department.idDepartment = client.Department_idDepartment
+where CreditState = 'not returned' order by Sum desc limit 1  ;
+
+
+
+24.Знайти клієнта, сума кредиту якого найменша
+select *
+from client
+     join application on client.idClient = application.Client_idClient
+     join department on department.idDepartment = client.Department_idDepartment
+ order by Sum  limit 1  ;
+
+
+25.Знайти кредити, сума яких більша за середнє значення усіх кредитів
+select *
+from client
+  join application on client.idClient = application.Client_idClient
+  join department on department.idDepartment = client.Department_idDepartment
+where Sum > (select avg(Sum)
+             from client
+   join application on client.idClient = application.Client_idClient
+   join department on department.idDepartment = client.Department_idDepartment);
+
+
+26. Знайти клієнтів, які є з того самого міста, що і клієнт, який взяв найбільшу кількість кредитів
+select * from client where City = (
+with CityFound as ( select City, count(LastName) as name
+          from client
+           join application on client.idClient = application.Client_idClient
+          join department on department.idDepartment = client.Department_idDepartment
+       group by LastName, City order by  name desc limit 1 )
+select City from CityFound);
+
+
+
+27. Місто клієнта з найбільшою кількістю кредитів
+select City, count(City) as CreditsCount
+from client
+     join application on client.idClient = application.Client_idClient
+     join department on department.idDepartment = client.Department_idDepartment
+group by City order by  CreditsCount desc limit 1;
